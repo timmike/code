@@ -3,8 +3,8 @@
 class db_connect{
 	private $host = 'localhost';
 	private $dbname = 'lottery';
-	private $user = 'root';
-	private $pass = 'root';
+	private $user = 'test';
+	private $pass = 'test';
 	private $DBH = '';
 	private $table = '';
 	
