@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6 ie ielt9 ielt8 ielt7 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7 ie ielt9 ielt8 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 ie ielt9 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9 ie no-js" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class='no-js' lang='en'>
+<!--<![endif]-->
+<head><meta charset="utf-8" /><title>
+	
+        Past Winning Numbers
+</title><meta content="Official site for California Lottery" name="description" /><meta content="width=device-width" name="viewport" /><link href='/css/global.css' rel='stylesheet' /><meta name='keywords' content=''/><link rel="shortcut icon" href="/favicon.ico" /><link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <!--
+      Bootstrap JavaScript
+      Modernizr bundled with RequireJS & the optional RequireJS plugins
+    -->
+    <script type="text/javascript" src="http://static.www.calottery.com/build/js/swfobject.js"></script>
+    <script type='text/javascript' src="http://static.www.calottery.com/build/js/modernizr-require.js?1289257857"></script>
+    <!-- inital require call for the global module, plus options to be used -->
+    <script type="text/javascript">
+        // Remove this once Ooyala fixes their code
+        // make it safe to use console.log always
+        (function (a) { function b() { } for (var c = "assert,count,debug,dir,dirxml,error,exception,group,groupCollapsed,groupEnd,info,log,markTimeline,profile,profileEnd,time,timeEnd,trace,warn".split(","), d; !!(d = c.pop()); ) { a[d] = a[d] || b; } })
+        (function () { try { console.log(); return window.console; } catch (a) { return (window.console = {}); } } ());
+    </script>
+    <script type="text/javascript">
+        require({
+            "baseUrl": "http://static.www.calottery.com/build/js/",
+            "paths": {
+                "jquery": "lib/jquery",
+                "jqueryui": "lib/jquery-ui"
+            },
+            priority: [
+                'jquery'
+            ]
+        });
+    </script>
+</head>
+<body class="">
+    <form name="frmMain" method="post" action="/play/draw-games/powerball/winning-numbers" id="frmMain">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+
+<script src="http://static.www.calottery.com/ScriptResource.axd?d=E8NDm_a49vHJuCm-pJUdt9z9ZdtfhtyHTyds5GaKkHya27Dlfyog0F3KqI8OrH_1KjqevfLk0bWzu8JvwL3Vc_j9KSns_J008cAPiDu8l86upnuGZ-Ng6mwSmN-oAFlnDEmkP8N5GF1Yw8tYC0S34XJO95g1&t=fffffffff9d85fa6" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="k5svGeVHKmeJuqKshfu73dOA7vMBgzJmtvAdz252h35M4O/m+sNd0JmQEbne9C/CRKWHxlpSe/A8vJL5sdzGpxSf4lKzTj67bMThK7VKiCxf3Qqpk/tsE9UG/4zMwTvYxiKbWwSnRyjpaZo0gSk838yrC2bWC9XagxpykRFg4gmuXwpAi1OgoG1kAdUHQb4HK3nrgd56owzNwDUFvdKSSftMRJ+DMOEEFFagsiukghpypVS645S0mtTHJqwnY5D7ULkyYG26bfccfdTTuCgRW9m/iXOma3xRrDg5V3NVwaCopeWKBIpJcmeHLSAySNURKFCf5ii6lg1TfzWNe3UoNRlvqDI=" />
+</div>
+    <div class="security_notice ui-dialog-content ui-widget-content" style="display: none;"
+        title="Notice to Users">
+        <input type="hidden" name="ctl07$hItemPath" id="ctl07_hItemPath" value="{A744713C-1DB5-4426-B902-6A914316E9BA}" />
+
+
+<p><strong>Information Collection, Use and Access Notice</strong></p>
+
+		<p>We collect and use the information provided to us (on this form, via a web page, via a web application or by email) in order to provide advice, information, services, or assistance. We are authorized to collect information for this purpose by section 8880 et seq. of the California Government Code. We recommend you do not provide any personal information not specifically requested. </p>
+    <p>When contacting us by email, we recommend that you only provide the personal information that you think we need to respond to your concern. If, however, you do not give us enough information, we may not be able to contact you or help you resolve your concern. </p>
+    <p>It is the policy of the California Lottery to share your personal information only as strictly necessary to provide services or assistance. This may include disclosing your personal information to Lottery affiliates and to other government agencies. We also could be required to disclose the personal information that you provide in the following circumstances: </p>
+    <ul class="bullets">
+      <li>In response to a Public Records Act request, as allowed by the Information Practices Act; </li>
+      <li>To another government agency as required by state or federal law; </li>
+      <li>In response to a court or administrative order, a subpoena, or a search warrant. </li>
+    </ul>
+    <p>You may review the records we maintain that contain your personal information, as permitted by the Information Practices Act. For questions about this notice, our <a href="/privacy-policy" title="Privacy policy">Privacy Policy</a>, or access to your records, contact the Lottery Privacy Coordinator at <a href="mailto:privacy@calottery.com" title="Privacy email">privacy@calottery.com</a> or write to: The California State Lottery - Attention: Privacy Coordinator. 700 Tenth Street, Sacramento, CA 95811. </p>
+
+    </div>
+    <div id="dvNotification" style="display: none" class="hasnotification">no</div>
+    <div class="winner-notification-dialog ui-dialog-content ui-widget-content" style="display: none;"
+        title="Winner Notification">
+        
+<h2>
+     !</h2>
+<p>
+    
+    
+<table>
+    <thead>
+        <tr>
+            <th>
+                
+            </th>
+            <th>
+                
+            </th>
+            <th>
+                
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    </tbody>
+</table>
+<div>
+    <input id="objWinnerNotification_chkAcknowledge" type="checkbox" name="objWinnerNotification$chkAcknowledge" />
+    <label for="objWinnerNotification_chkAcknowledge" id="objWinnerNotification_chkAcknowledgeLabel"></label>
+</div>
+        
+
+<div class="uppad">
+    <div class="ftop">
+        <div class="spacer"> </div>
+        <div class="error-message"></div>
+    </div>
+    <div class="fleft">
+        <input type="submit" name="objWinnerNotification$btnNotifications" value="" id="objWinnerNotification_btnNotifications" />
+    </div>
+    <div class="fright">
+        <a id="objWinnerNotification_lnkClaimLink" class="modal-close-trigger" href="javascript:__doPostBack('objWinnerNotification$lnkClaimLink','')">Close</a>
+        <br />
+        
+    </div>
+</div>
+    </div>
+    <div id='container'>
+        <div class='wrapper'>
+            
+
+<header>
+    <a href="/" id='logo-sunburst' style="background: url('http://static.www.calottery.com/~/media/HomePage/logo-calottery.ashx') " >CA Lottery Home</a>
+    <p id='top-nav'>
+    	<a class="button" href="/play-responsibly"><span><span>Play Responsibly</span></span></a> 
+        <a href="/about-us"><span>About Us</span></a> 
+        <a href="/media"><span>Media</span></a> 
+        <a href="/vendors"><span>Vendors</span></a>
+        <a href="/retailer"><span>Retailers</span></a>
+        <a href="/play/draw-games/powerball/winning-numbers?sc_lang=es" id="objHeader_aLanguage">Español</a>
+    </p>
+    <div id='search'>
+        <label for="q" class="visuallyhidden">Search</label>
+        <input autocomplete='on' value='' class='text placeholder' id='q' name='q' placeholder='Search' type='text' />
+        <button><span>Search</span></button>
+    </div>
+    <ul id='main-nav'>
+        <li data-hover_content='play' class="selected"><a href="/play"><span>PLAY</span></a></li>
+        <li data-hover_content='win' class=""><a href="/win"><span>WIN</span></a></li>
+        <li data-hover_content='happenings' class=""><a href="/happenings"><span>HAPPENINGS</span></a></li>
+        <li data-hover_content='giving-back' class=""><a href="/giving-back"><span>GIVING BACK</span></a></li>
+        <li data-hover_content='lucky-retailers' class=""><a href="/lucky-retailers"><span>LUCKY RETAILERS</span></a></li>
+        <li data-hover_content='my-account' class=" my-account">
+            <p class='welcome'>
+                
+                Welcome Guest
+            </p>
+            <a href='https://secondchance.calottery.com/'>
+                <span>My Account</span>
+            </a>
+            <p class='login'>
+                
+                    <a href='https://www.calottery.com/signin?redir=http://www.calottery.com/play/draw-games/powerball/winning-numbers'>Sign In</a> | 
+                    <a href='https://secondchance.calottery.com/account/signup'>Join</a>
+                
+                
+                
+            </p>
+            
+            
+        </li>
+    </ul>
+    <!--breadcrumbs-->      
+    <ul id='breadcrumbs'><li><a id="objHeader_ctl05_Repeater1_ctl01_HyperLink1" href="http://www.calottery.com">Home</a></li><li><a id="objHeader_ctl05_Repeater1_ctl02_HyperLink1" href="/play">Play</a></li><li><a id="objHeader_ctl05_Repeater1_ctl03_HyperLink1" href="/play/draw-games">Draw Games</a></li><li><a id="objHeader_ctl05_Repeater1_ctl04_HyperLink1" href="/play/draw-games/powerball">POWERBALL</a></li><li><a id="objHeader_ctl05_Repeater1_ctl05_HyperLink1"></a>Past Winning Numbers</li></ul>
+    <section id='submenu'>
+        <div id='play'>
+            
+<h1>
+    <a id="objHeader_Header_Play1_ctl00_HyperLink1" href="/play"><span>Play Overview</span></a>
+    |
+    <a id="objHeader_Header_Play1_ctl01_HyperLink1" href="/play/whats-my-game"><span>What's My Game Today?</span></a>
+</h1>
+<div class='row'>
+    <div class='column grid-2'>
+        <h2>
+            <a id="objHeader_Header_Play1_ctl02_HyperLink1" href="/play/draw-games"><span>Draw Games</span></a>
+        </h2>
+        <ul>
+            
+                    <li>
+                        <a id="objHeader_Header_Play1_rptDrawGames_ctl00_lnkURL" href="/play/draw-games/powerball">POWERBALL</a>
+                    </li>
+                
+                    <li>
+                        <a id="objHeader_Header_Play1_rptDrawGames_ctl01_lnkURL" href="/play/draw-games/mega-millions">MEGA Millions</a>
+                    </li>
+                
+                    <li>
+                        <a id="objHeader_Header_Play1_rptDrawGames_ctl02_lnkURL" href="/play/draw-games/superlotto-plus">SuperLotto Plus</a>
+                    </li>
+                
+                    <li>
+                        <a id="objHeader_Header_Play1_rptDrawGames_ctl03_lnkURL" href="/play/draw-games/fantasy-5">Fantasy 5</a>
+                    </li>
+                
+                    <li>
+                        <a id="objHeader_Header_Play1_rptDrawGames_ctl04_lnkURL" href="/play/draw-games/daily-4">Daily 4</a>
+                    </li>
+                
+                    <li>
+                        <a id="objHeader_Header_Play1_rptDrawGames_ctl05_lnkURL" href="/play/draw-games/daily-3">Daily 3</a>
+                    </li>
+                
+                    <li>
+                        <a id="objHeader_Header_Play1_rptDrawGames_ctl06_lnkURL" href="/play/draw-games/daily-derby">Daily Derby</a>
+                    </li>
+                
+                    <li>
+                        <a id="objHeader_Header_Play1_rptDrawGames_ctl07_lnkURL" href="/play/draw-games/hot-spot">Hot Spot</a>
+                    </li>
+                
+        </ul>
+    </div>
+    <div class='column grid-2'>
+        <h2>
+            <a id="objHeader_Header_Play1_ctl03_HyperLink1" href="/play/scratchers-games"><span>Scratchers Games</span></a>
+        </h2>
+        <ul>
+            <li><a href='/play/scratchers-games/$1-scratchers'>$1 Games</a>   |   <a href='/play/scratchers-games/$2-scratchers'>$2 Games</a></li><li><a href='/play/scratchers-games/$3-scratchers'>$3 Games</a>   |   <a href='/play/scratchers-games/$5-scratchers'>$5 Games</a></li><li><a href='/play/scratchers-games/$10-scratchers'>$10 Games</a></li><li><a href='/play/scratchers-games/how-to-play'>How To Play</a></li><li><a href='/play/scratchers-games/end-of-game-info'>End of Game Info</a></li><li><a href='/play/scratchers-games/top-prizes-remaining'>Top Prizes Remaining</a></li><li><a href='/play/scratchers-games/faqs'>FAQs</a></li>
+        </ul>
+    </div>
+    
+        <div class='column grid-2'>
+            <h2>
+                <a href='https://secondchance.calottery.com/second-chance/'>
+                    2nd Chance
+                </a>
+            </h2>
+            <ul>
+                <li><a href='https://secondchance.calottery.com/second-chance/index/index/type/REPLAY/'>
+                    Replay
+                </a></li>
+                <li><a href='https://secondchance.calottery.com/second-chance/index/index/type/FANTASY5/'>
+                    Fantasy 5 Bonus Bucks
+                </a></li>
+            </ul>
+            <h2>
+                More ways to play
+            </h2>
+            <ul>
+                <li>
+                    <a id="objHeader_Header_Play1_AbsLinkField1_HyperLink1" href="/play/jackpot-captain"><span>Jackpot Captain</span></a>
+                </li>
+            </ul>
+        </div>
+        <div class='column last-column grid-2'>
+            <h2>
+                <a id="objHeader_Header_Play1_AbsLinkField3_HyperLink1" href="/play/whats-my-game"><span>Game Finder</span></a>
+            </h2>
+            <ul>
+                <li>
+                    <a id="objHeader_Header_Play1_AbsLinkField2_HyperLink1" href="/play/whats-my-game"><span>What's My Game Today?</span></a>
+                </li>
+            </ul>
+        </div>
+    
+    
+</div>
+<!-- flyout promos -->
+<div class='ways-to-play'>
+    
+<h2>
+    Try these new ways to play... and win.
+</h2>
+<ul class='horizontal'>
+    
+            <li>
+                <a id="objHeader_Header_Play1_ctl04_Repeater1_ctl00_lnkURL1" class="deferImage" href="/happenings/jackpot-captain-free-play-promo"><span id="objHeader_Header_Play1_ctl04_Repeater1_ctl00_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Happenings/promos/Jackpot Captains Promo/JPC_ENG_FlyOutModule220x81.jpg" data-height="81px" data-width="220px" data-alt="Jackpot Captains">Jackpot Captains</span></a>
+            </li>
+        
+            <li>
+                <a id="objHeader_Header_Play1_ctl04_Repeater1_ctl01_lnkURL1" class="deferImage" href="/happenings/summerdreamin-sweepstakes"><span id="objHeader_Header_Play1_ctl04_Repeater1_ctl01_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Happenings/promos/Summer Dreamin/Summer Dreamin final/Flyout Module 220x81.jpg" data-height="81px" data-width="220px" data-alt="summer dreamin">summer dreamin</span></a>
+            </li>
+        
+            <li>
+                <a id="objHeader_Header_Play1_ctl04_Repeater1_ctl02_lnkURL1" class="deferImage" href="/happenings/ca-live"><span id="objHeader_Header_Play1_ctl04_Repeater1_ctl02_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Happenings/promos/CaLive/FlyoutModuleRounded_v2.jpg" data-height="81px" data-width="220px" data-alt="calive events">calive events</span></a>
+            </li>
+        
+</ul>
+</div>
+
+        </div>
+        <div id='win'>
+            
+<h1>
+    <a id="objHeader_Header_Win1_AbsLinkField1_HyperLink1" href="/win"><span>Win Overview</span></a>
+</h1>
+<div class='row'>
+    <div class='column grid-3'>
+        <div class='heading'>
+            <h2>
+                Are You A Winner?
+            </h2>
+        </div>
+        <ul>
+            
+                    <li>
+                        <a id="objHeader_Header_Win1_rptAreYouAWinner_ctl00_lnkURL" href="/win/winning-numbers">Winning Numbers</a>
+                    </li>
+                
+                    <li>
+                        <a id="objHeader_Header_Win1_rptAreYouAWinner_ctl01_lnkURL" href="/win/unclaimed-prizes">Unclaimed Prizes</a>
+                    </li>
+                
+        </ul>
+        <h2>
+            I've Won! Now What?
+        </h2>
+        <ul>
+            
+                    <li>
+                        <a id="objHeader_Header_Win1_rptIHaveWon_ctl00_lnkURL" href="/win/claiming-prizes">Claiming Prizes</a>
+                    </li>
+                
+                    <li>
+                        <a id="objHeader_Header_Win1_rptIHaveWon_ctl01_lnkURL" href="/about-us/office-locations">Office Locations</a>
+                    </li>
+                
+                    <li>
+                        <a id="objHeader_Header_Win1_rptIHaveWon_ctl02_lnkURL" href="/win/winners-handbook">Winners' Handbook</a>
+                    </li>
+                
+        </ul>
+    </div>
+    <div class='column grid-6 last-column'>
+        
+
+<div class='heading'>
+    <h2>
+        <a id="objHeader_Header_Win1_ctl00_AbsLinkField1_HyperLink1" href="/win/winners-stories"><span>Winners' Stories</span></a>
+    </h2>
+    <p class='see-all'>
+        <a id="objHeader_Header_Win1_ctl00_AbsLinkField2_HyperLink1" href="/win/winners-stories"><span>See all »</span></a>
+    </p>
+</div>
+<ul>
+    
+            <li class='media'>
+                <a id="objHeader_Header_Win1_ctl00_Repeater1_ctl00_lnkURL1" class="img thumb deferImage" href="/win/winners-stories/michael-garcia"><span id="objHeader_Header_Win1_ctl00_Repeater1_ctl00_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Win/Winners-Stories/Corp-Comm-Winner-Photos/Michael Garcia200.jpg" data-height="42px" data-width="44px" data-alt="Michael Garcia 200">Michael Garcia 200</span></a>
+                <div class='bd'>
+                    <p>
+                        <a href='/win/winners-stories/michael-garcia'>
+                            <strong>Student Claims Multi-Million Dollar POWERBALLÂ® Prize!</strong>
+                        </a>
+                        <br />
+                        Student Claims Multi-Million Dollar POWERBALLÂ® Prize!
+                    </p>
+                </div>
+            </li>
+        
+            <li class='media'>
+                <a id="objHeader_Header_Win1_ctl00_Repeater1_ctl01_lnkURL1" class="img thumb deferImage" href="/win/winners-stories/shane-hayden"><span id="objHeader_Header_Win1_ctl00_Repeater1_ctl01_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Win/Winners-Stories/Corp-Comm-Winner-Photos/Shane Hayden200.jpg" data-height="42px" data-width="44px" data-alt="Shane Hayden 200">Shane Hayden 200</span></a>
+                <div class='bd'>
+                    <p>
+                        <a href='/win/winners-stories/shane-hayden'>
+                            <strong>Two Self-Employed Fantasy 5 Winners Come Forward, Each Winning More Than $150,000</strong>
+                        </a>
+                        <br />
+                        Two Self-Employed Fantasy 5 Winners Come Forward, Each Winning More Than $150,000
+                    </p>
+                </div>
+            </li>
+        
+            <li class='media'>
+                <a id="objHeader_Header_Win1_ctl00_Repeater1_ctl02_lnkURL1" class="img thumb deferImage" href="/win/winners-stories/sonny-alexander"><span id="objHeader_Header_Win1_ctl00_Repeater1_ctl02_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Win/Winners-Stories/Corp-Comm-Winner-Photos/Sonny Alexander200.jpg" data-height="42px" data-width="44px" data-alt="Sonny Alexander 200">Sonny Alexander 200</span></a>
+                <div class='bd'>
+                    <p>
+                        <a href='/win/winners-stories/sonny-alexander'>
+                            <strong>A Lucky Stop for a Hollywood Tour Guide Leads to a $900,000 POWERBALLÂ® Win!</strong>
+                        </a>
+                        <br />
+                        A Lucky Stop for a Hollywood Tour Guide Leads to a $900,000 POWERBALLÂ® Win!
+                    </p>
+                </div>
+            </li>
+        
+            <li class='media'>
+                <a id="objHeader_Header_Win1_ctl00_Repeater1_ctl03_lnkURL1" class="img thumb deferImage" href="/win/winners-stories/tom-ngumi"><span id="objHeader_Header_Win1_ctl00_Repeater1_ctl03_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Win/Winners-Stories/Corp-Comm-Winner-Photos/Tom Ngumi200.jpg" data-height="42px" data-width="44px" data-alt="Tom Ngumi 200">Tom Ngumi 200</span></a>
+                <div class='bd'>
+                    <p>
+                        <a href='/win/winners-stories/tom-ngumi'>
+                            <strong>Californiaâ€™s First Million Dollar POWERBALLÂ® Ticket is Claime</strong>
+                        </a>
+                        <br />
+                        Californiaâ€™s First Million Dollar POWERBALLÂ® Ticket is Claimed
+                    </p>
+                </div>
+            </li>
+        
+</ul>
+    </div>
+</div>
+<!-- flyout promos -->
+<div class='ways-to-play'>
+    
+<h2>
+    Get that winning feeling.
+</h2>
+<ul class='horizontal'>
+    
+            <li>
+                <a id="objHeader_Header_Win1_ctl01_Repeater1_ctl00_lnkURL1" class="deferImage" href="/happenings/summerdreamin-sweepstakes"><span id="objHeader_Header_Win1_ctl01_Repeater1_ctl00_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Happenings/promos/Summer Dreamin/Summer Dreamin final/Flyout Module 220x81.jpg" data-height="81px" data-width="220px" data-alt="summer dreamin">summer dreamin</span></a>
+            </li>
+        
+            <li>
+                <a id="objHeader_Header_Win1_ctl01_Repeater1_ctl01_lnkURL1" class="deferImage" href="/happenings/ca-live"><span id="objHeader_Header_Win1_ctl01_Repeater1_ctl01_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Happenings/promos/CaLive/FlyoutModuleRounded_v2.jpg" data-height="81px" data-width="220px" data-alt="calive events">calive events</span></a>
+            </li>
+        
+            <li>
+                <a id="objHeader_Header_Win1_ctl01_Repeater1_ctl02_lnkURL1" class="deferImage" href="/happenings/jackpot-captain-free-play-promo"><span id="objHeader_Header_Win1_ctl01_Repeater1_ctl02_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Happenings/promos/Jackpot Captains Promo/JPC_ENG_FlyOutModule220x81.jpg" data-height="81px" data-width="220px" data-alt="Jackpot Captains">Jackpot Captains</span></a>
+            </li>
+        
+</ul>
+</div>
+        </div>
+        <div id='happenings'>
+            
+
+<h1>
+    <a id="objHeader_Header_Happenings1_AbsLinkField5_HyperLink1" href="/happenings"><span>Happenings Overview</span></a>
+</h1>
+<div class='row'>
+    <div class='column grid-6'>
+        <div class='heading'>
+            <h2>
+                <a id="objHeader_Header_Happenings1_AbsLinkField1_HyperLink1" href="/happenings/lottery-tv"><span>Lottery TV</span></a>
+            </h2>
+            <p class='see-all'>
+                <a id="objHeader_Header_Happenings1_AbsLinkField2_HyperLink1" href="/happenings/lottery-tv"><span>See all »</span></a>
+            </p>
+        </div>
+        <ul>
+            
+                    <li class='media'>
+                        <a id="objHeader_Header_Happenings1_rptLotteryTV_ctl00_lnkURL1" title="Click on it to view this Video" class="img thumb deferImage" href="/Happenings/Lottery-Tv/?v=massoud-ardalan"><span id="objHeader_Header_Happenings1_rptLotteryTV_ctl00_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Videos/Winner-videos/mohamad-slp-winner_rv3.jpg?h=42&mh=42&mw=44&w=44" data-height="42px" data-width="44px" data-alt="SuperLotto Plus winner">SuperLotto Plus winner</span></a>
+                        <div class='bd'>
+                            <p>
+                                <a id="objHeader_Header_Happenings1_rptLotteryTV_ctl00_lnkURL2" title="Click on it to view this Video" href="/Happenings/Lottery-Tv/?v=massoud-ardalan">Perfect Timing for SuperLotto PlusÂ® Winner</a><br />
+                                Duration: 2:43
+                            </p>
+                        </div>
+                    </li>
+                
+                    <li class='media'>
+                        <a id="objHeader_Header_Happenings1_rptLotteryTV_ctl01_lnkURL1" title="Click on it to view this Video" class="img thumb deferImage" href="/Happenings/Lottery-Tv/?v=lucky-for-life-commercial"><span id="objHeader_Header_Happenings1_rptLotteryTV_ctl01_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Videos/Event-videos/lucky for life commercial.jpg?h=42&mh=42&mw=44&w=44" data-height="42px" data-width="44px" data-alt="Lucky for life commercial">Lucky for life commercial</span></a>
+                        <div class='bd'>
+                            <p>
+                                <a id="objHeader_Header_Happenings1_rptLotteryTV_ctl01_lnkURL2" title="Click on it to view this Video" href="/Happenings/Lottery-Tv/?v=lucky-for-life-commercial">California Lucky for Life ScratchersÂ® Commercial</a><br />
+                                Duration: :30
+                            </p>
+                        </div>
+                    </li>
+                
+                    <li class='media'>
+                        <a id="objHeader_Header_Happenings1_rptLotteryTV_ctl02_lnkURL1" title="Click on it to view this Video" class="img thumb deferImage" href="/Happenings/Lottery-Tv/?v=mystery-winner-revealed"><span id="objHeader_Header_Happenings1_rptLotteryTV_ctl02_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Videos/Winner-videos/mystery winner video.jpg?h=42&mh=42&mw=44&w=44" data-height="42px" data-width="44px" data-alt="Mystery winner video">Mystery winner video</span></a>
+                        <div class='bd'>
+                            <p>
+                                <a id="objHeader_Header_Happenings1_rptLotteryTV_ctl02_lnkURL2" title="Click on it to view this Video" href="/Happenings/Lottery-Tv/?v=mystery-winner-revealed">Mystery Winner Revealed!</a><br />
+                                Duration: 3:06
+                            </p>
+                        </div>
+                    </li>
+                
+                    <li class='media'>
+                        <a id="objHeader_Header_Happenings1_rptLotteryTV_ctl03_lnkURL1" title="Click on it to view this Video" class="img thumb deferImage" href="/Happenings/Lottery-Tv/?v=supplemental-funding-in-action"><span id="objHeader_Header_Happenings1_rptLotteryTV_ctl03_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Videos/Funding-education-videos/EC Reems.jpg?h=42&mh=42&mw=44&w=44" data-height="42px" data-width="44px" data-alt="EC REems image">EC REems image</span></a>
+                        <div class='bd'>
+                            <p>
+                                <a id="objHeader_Header_Happenings1_rptLotteryTV_ctl03_lnkURL2" title="Click on it to view this Video" href="/Happenings/Lottery-Tv/?v=supplemental-funding-in-action">E.C. Reems Academy of Technology and Arts</a><br />
+                                Duration: 4:24
+                            </p>
+                        </div>
+                    </li>
+                
+        </ul>
+    </div>
+    
+    
+    
+    <div class='column last-column grid-3'>
+        <div class='heading'>
+            <h2>
+                <a id="objHeader_Header_Happenings1_AbsLinkField3_HyperLink1" href="/happenings/ca-live"><span>CA Lottery Live</span></a>
+            </h2>
+            <p class='see-all'>
+                <a id="objHeader_Header_Happenings1_AbsLinkField4_HyperLink1" href="/happenings/ca-live"><span>See all »</span></a>
+            </p>
+        </div>
+        <ul>
+            
+                    <li>
+                        <a href="/happenings/events/butte-county-fair">
+                            Butte County Fair »
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/happenings/events/summer-dreamin">
+                            Summer Dreamin' Sweepstakes »
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/happenings/events/tulare-county-fair">
+                            Tulare County Fair »
+                        </a>
+                    </li>
+                
+        </ul>
+    </div>
+</div>
+<!-- flyout promos -->
+<div class='ways-to-play'>
+    
+<h2>
+    See what happens when you play.
+</h2>
+<ul class='horizontal'>
+    
+            <li>
+                <a id="objHeader_Header_Happenings1_ctl00_Repeater1_ctl00_lnkURL1" class="deferImage" href="/happenings/jackpot-captain-free-play-promo"><span id="objHeader_Header_Happenings1_ctl00_Repeater1_ctl00_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Happenings/promos/Jackpot Captains Promo/JPC_ENG_FlyOutModule220x81.jpg" data-height="81px" data-width="220px" data-alt="Jackpot Captains">Jackpot Captains</span></a>
+            </li>
+        
+            <li>
+                <a id="objHeader_Header_Happenings1_ctl00_Repeater1_ctl01_lnkURL1" class="deferImage" href="/happenings/summerdreamin-sweepstakes"><span id="objHeader_Header_Happenings1_ctl00_Repeater1_ctl01_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Happenings/promos/Summer Dreamin/Summer Dreamin final/Flyout Module 220x81.jpg" data-height="81px" data-width="220px" data-alt="summer dreamin">summer dreamin</span></a>
+            </li>
+        
+            <li>
+                <a id="objHeader_Header_Happenings1_ctl00_Repeater1_ctl02_lnkURL1" class="deferImage" href="/happenings/ca-live"><span id="objHeader_Header_Happenings1_ctl00_Repeater1_ctl02_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Happenings/promos/CaLive/FlyoutModuleRounded_v2.jpg" data-height="81px" data-width="220px" data-alt="calive events">calive events</span></a>
+            </li>
+        
+</ul>
+</div>
+        </div>
+        <div id='giving-back'>
+            
+
+<h1>
+    <a id="objHeader_Header_GivingBack1_AbsLinkField1_HyperLink1" href="/giving-back"><span>Giving Back Overview</span></a>
+</h1>
+<div class='row'>
+    <div class='column grid-3'>
+        <div class='heading'>
+            <h2>
+                <a id="objHeader_Header_GivingBack1_AbsLinkField2_HyperLink1" href="/giving-back/how-much-money"><span>Where The Money Goes</span></a>
+            </h2>
+            <p class='see-all'>
+                <a id="objHeader_Header_GivingBack1_AbsLinkField3_HyperLink1" href="/giving-back/how-much-money"><span>See all »</span></a>
+            </p>
+        </div>
+        <ul>
+            
+                    <li>
+                        <a id="objHeader_Header_GivingBack1_rptWhereTheMoneyGoes_ctl00_lnkURL" href="/giving-back/lottery-funds-at-work">Lottery Funds at Work</a>
+                    </li>
+                
+                    <li>
+                        <a id="objHeader_Header_GivingBack1_rptWhereTheMoneyGoes_ctl01_lnkURL" href="/giving-back/making-a-difference">Making a Difference</a>
+                    </li>
+                
+                    <li>
+                        <a id="objHeader_Header_GivingBack1_rptWhereTheMoneyGoes_ctl02_lnkURL" href="/giving-back/partnering-in-education">Partnering In Education</a>
+                    </li>
+                
+                    <li>
+                        <a id="objHeader_Header_GivingBack1_rptWhereTheMoneyGoes_ctl03_lnkURL" href="/giving-back/how-much-money">How Much Money</a>
+                    </li>
+                
+        </ul>
+    </div>
+    <div class='column grid-3'>
+        <div class='heading'>
+            <h2>
+                <a id="objHeader_Header_GivingBack1_AbsLinkField4_HyperLink1" href="/giving-back/making-a-difference"><span>Making A Difference</span></a>
+            </h2>
+            <p class='see-all'>
+                <a id="objHeader_Header_GivingBack1_AbsLinkField5_HyperLink1" href="/giving-back/making-a-difference"><span>See all »</span></a>
+            </p>
+        </div>
+        <ul>
+            
+                    <li class='media blurb'>
+                        <div class='bd'>
+                            <p>
+                                <strong>California Lottery Mission Statement</strong><br />
+                                
+		<p>In 1984, Proposition 37...<br />
+                                <a id="objHeader_Header_GivingBack1_rptMakingADifference_ctl00_HyperLink1" href="/giving-back/making-a-difference/mission-statement">Get the full story»
+                                </a>
+                            </p>
+                        </div>
+                    </li>
+                
+                    <li class='media blurb'>
+                        <div class='bd'>
+                            <p>
+                                <strong>California Lottery Benefits California Schools</strong><br />
+                                
+		<p>Recognized as one of th...<br />
+                                <a id="objHeader_Header_GivingBack1_rptMakingADifference_ctl01_HyperLink1" href="/giving-back/making-a-difference/lottery-benefits-california-schools">Get the full story»
+                                </a>
+                            </p>
+                        </div>
+                    </li>
+                
+        </ul>
+    </div>
+    <div class='column last-column grid-3'>
+        <div class='heading'>
+            <h2>
+                <a id="objHeader_Header_GivingBack1_AbsLinkField6_HyperLink1" href="/giving-back/partnering-in-education"><span>Partners In Education</span></a>
+            </h2>
+            <p class='see-all'>
+                <a id="objHeader_Header_GivingBack1_AbsLinkField7_HyperLink1" href="/giving-back/partnering-in-education"><span>See all »</span></a>
+            </p>
+        </div>
+        <p>
+            We've teamed up with partners to create opportunities for students and educators. <br />
+            <a id="objHeader_Header_GivingBack1_AbsLinkField9_HyperLink1"></a>
+        </p>
+    </div>
+</div>
+<!-- flyout promos -->
+<div class='ways-to-play'>
+    
+<h2>
+    When you play California isn't the only winner.
+</h2>
+<ul class='horizontal'>
+    
+            <li>
+                <a id="objHeader_Header_GivingBack1_Header_Promo1_Repeater1_ctl00_lnkURL1" class="deferImage" href="/play/draw-games/superlotto-plus"><span id="objHeader_Header_GivingBack1_Header_Promo1_Repeater1_ctl00_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/top-nav-images-and-promos/nav_promo_0007_superlotto.ashx" data-height="81px" data-width="220px" data-alt="Play for over 7 million">Play for over 7 million</span></a>
+            </li>
+        
+            <li>
+                <a id="objHeader_Header_GivingBack1_Header_Promo1_Repeater1_ctl01_lnkURL1" class="deferImage" href="/happenings/ca-live"><span id="objHeader_Header_GivingBack1_Header_Promo1_Repeater1_ctl01_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Happenings/promos/CaLive/FlyoutModuleRounded_v2.jpg" data-height="81px" data-width="220px" data-alt="calive events">calive events</span></a>
+            </li>
+        
+            <li>
+                <a id="objHeader_Header_GivingBack1_Header_Promo1_Repeater1_ctl02_lnkURL1" class="deferImage" href="/play/draw-games/mega-millions"><span id="objHeader_Header_GivingBack1_Header_Promo1_Repeater1_ctl02_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/top-nav-images-and-promos/nav_promo_0010_MEGA-Millions.ashx" data-height="81px" data-width="220px" data-alt="Play for a life changing win. Go to MEGA Millions. ">Play for a life changing win. Go to MEGA Millions. </span></a>
+            </li>
+        
+</ul>
+</div>
+        </div>
+        <div id='lucky-retailers'>
+            
+
+<h1>
+    <a id="objHeader_Header_LuckyRetailers1_AbsLinkField1_HyperLink1" href="/lucky-retailers"><span>Lucky Retailers Overview</span></a>
+</h1>
+<div class='row'>
+    <div class='column grid-3'>
+        <h2>
+           <a id="objHeader_Header_LuckyRetailers1_AbsLinkField3_HyperLink1"></a>
+        </h2>
+        <h2>
+           <a id="objHeader_Header_LuckyRetailers1_AbsLinkField7_HyperLink1" href="/lucky-retailers"><span>LUCKY RETAILERS</span></a>
+        </h2>
+        <p>Easily search for Lottery retailers that have sold Jackpot tickets - who knows, you may be next!</p>
+        
+        <p><a id="objHeader_Header_LuckyRetailers1_AbsLinkField6_HyperLink1" href="/lucky-retailers/lucky-retailers-list"><span>See all Lucky Retailers Â»</span></a></p>
+        
+    </div>
+
+    <div class='column grid-3'>
+            <h2><a id="objHeader_Header_LuckyRetailers1_AbsLinkField2_HyperLink1" href="/lucky-retailers"><span>WHERE TO PLAY</span></a></h2>
+            <div class="clearfix">
+                <div class="fleft"><img id="objHeader_Header_LuckyRetailers1_AbsLinkField5_Image1" src="http://static.www.calottery.com/~/media/top-nav-images-and-promos/sun-map-marker.ashx" alt="California Lottery" style="height:73px;width:64px;border-width:0px;" /></div>
+                <p>There are more than 20,000 Lottery retail locations across California.<br/><br/>Find a Lottery retailer in your area.</p>
+            </div>
+            <p><a id="objHeader_Header_LuckyRetailers1_AbsLinkField4_HyperLink1" href="/lucky-retailers"><span>Search »</span></a></p>          
+    </div>
+
+    <div class='column last-column grid-3'>
+        <h2><a id="objHeader_Header_LuckyRetailers1_scMoreWaysToPlayHeader_HyperLink1" href="/lucky-retailers/more-ways-to-buy"><span>MORE WAYS TO BUY</span></a></h2>
+        <p>From Scratchers vending machines to draw games terminals, learn about other ways to purchase Lottery Tickets.</p>
+         <p><a id="objHeader_Header_LuckyRetailers1_scMoreWaysToPlayLink_HyperLink1" href="/lucky-retailers/more-ways-to-buy"><span>See more ways to buy »</span></a></p>
+    </div>
+</div>
+<!-- flyout promos -->
+<div class='ways-to-play'>
+    
+<h2>
+    Easily search for Lottery retailers that have sold Jackpot tickets - who knows, you may be next!
+</h2>
+<ul class='horizontal'>
+    
+            <li>
+                <a id="objHeader_Header_LuckyRetailers1_Header_Promo1_Repeater1_ctl00_lnkURL1" class="deferImage" href="/happenings/summerdreamin-sweepstakes"><span id="objHeader_Header_LuckyRetailers1_Header_Promo1_Repeater1_ctl00_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Happenings/promos/Summer Dreamin/Summer Dreamin final/Flyout Module 220x81.jpg" data-height="81px" data-width="220px" data-alt="summer dreamin">summer dreamin</span></a>
+            </li>
+        
+            <li>
+                <a id="objHeader_Header_LuckyRetailers1_Header_Promo1_Repeater1_ctl01_lnkURL1" class="deferImage" href="/play/jackpot-captain"><span id="objHeader_Header_LuckyRetailers1_Header_Promo1_Repeater1_ctl01_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/top-nav-images-and-promos/nav_promo_0005_jackpot-captain.ashx" data-height="81px" data-width="220px" data-alt="Start a Lottery pool">Start a Lottery pool</span></a>
+            </li>
+        
+            <li>
+                <a id="objHeader_Header_LuckyRetailers1_Header_Promo1_Repeater1_ctl02_lnkURL1" class="deferImage" href="/play/whats-my-game"><span id="objHeader_Header_LuckyRetailers1_Header_Promo1_Repeater1_ctl02_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/top-nav-images-and-promos/nav_promo_0006_lottery-winner.ashx" data-height="81px" data-width="220px" data-alt="be our next Lottery winner">be our next Lottery winner</span></a>
+            </li>
+        
+</ul>
+</div>
+        </div>
+        <div id='my-account'>
+            
+    <!-- signed out state -->
+    <h1>
+        My Account
+    </h1>
+    <div class='row"' style="">
+        <div class="column grid-4">
+            <p>
+                Hello Guest, already have an account?
+                <a href='https://www.calottery.com/signin?redir=http://www.calottery.com/play/draw-games/powerball/winning-numbers'>
+                    Sign In
+                </a>
+            </p>
+            
+		<h2>Don't have an account?</h2>
+<p class="no-margin">No problem. Sign up to get full access to:</p>
+<ul class="bullet">
+<li>Second Chance draws</li>
+<li>Jackpot Captain tools</li>
+<li>Exclusive promotions and more</li>
+</ul>
+            <a href="https://secondchance.calottery.com/account/signup"
+                class="button"><span><span>
+                    Join Now
+                </span></span></a>
+        </div>
+        <div class='column last-column grid-5 my-acct-sys-mssg'>
+            
+		<img width="360" height="180" alt="summer dreamin" src="http://static.www.calottery.com/~/media/Happenings/promos/Summer Dreamin/Summer Dreamin final/summer dreaming 420x.jpg?w=360&h=180&as=1" />
+
+        </div>
+    </div>
+    <!-- flyout promos -->
+    <div class='ways-to-play'>
+        
+<h2>
+    Members get to play more!
+</h2>
+<ul class='horizontal'>
+    
+            <li>
+                <a id="objHeader_Header_My_Account_Header_Promo1_Repeater1_ctl00_lnkURL1" class="deferImage" href="/play/jackpot-captain"><span id="objHeader_Header_My_Account_Header_Promo1_Repeater1_ctl00_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/top-nav-images-and-promos/nav_promo_0005_jackpot-captain.ashx" data-height="81px" data-width="220px" data-alt="Start a Lottery pool">Start a Lottery pool</span></a>
+            </li>
+        
+            <li>
+                <a id="objHeader_Header_My_Account_Header_Promo1_Repeater1_ctl01_lnkURL1" class="deferImage" href="/happenings/summerdreamin-sweepstakes"><span id="objHeader_Header_My_Account_Header_Promo1_Repeater1_ctl01_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/Happenings/promos/Summer Dreamin/Summer Dreamin final/Flyout Module 220x81.jpg" data-height="81px" data-width="220px" data-alt="summer dreamin">summer dreamin</span></a>
+            </li>
+        
+            <li>
+                <a id="objHeader_Header_My_Account_Header_Promo1_Repeater1_ctl02_lnkURL1" class="deferImage" href="/play/second-chance/fantasy-5-bonus-bucks"><span id="objHeader_Header_My_Account_Header_Promo1_Repeater1_ctl02_spnImageSlug" class="slug" data-src="http://static.www.calottery.com/~/media/top-nav-images-and-promos/nav_promo_0011_BonusBucks.ashx" data-height="81px" data-width="220px" data-alt="Get a bonus shot at 10,000">Get a bonus shot at 10,000</span></a>
+            </li>
+        
+</ul>
+    </div>
+
+
+
+
+
+
+
+        </div>
+      </section>
+</header>
+            
+<div id='main' class=''>
+    <div id='winning-numbers' class="winning_numbers_tab" style="display:none;">
+        <p>
+            <a href='#' onclick="_gaq.push(['_trackPageview', '/winning-numbers']);">Winning Numbers</a>
+        </p>
+    </div>
+    
+    
+    
+            
+
+<!--
+COLUMNS-LEFT-CONTENT-AND-RIGHT
+
+  LEFT COLUMN
+-->
+<div id="left-column">
+    <ul id="sub-nav"><li  class="first open"><a href="/play/draw-games">Draw Games</a><ul><li  class="first open"><a href="/play/draw-games/powerball">POWERBALL</a><ul><li  class=""><a href="/play/draw-games/powerball/how-to-play">How To Play</a></li><li  class="selected"><a href="/play/draw-games/powerball/winning-numbers">Past Winning Numbers</a></li><li  class=""><a href="/play/draw-games/powerball/number-frequency">Number Frequency</a></li><li  class="last"><a href="/play/draw-games/powerball/faqs">FAQs</a></li></ul></li><li  class=""><a href="/play/draw-games/mega-millions">MEGA Millions</a></li><li  class=""><a href="/play/draw-games/superlotto-plus">SuperLotto Plus</a></li><li  class=""><a href="/play/draw-games/fantasy-5">Fantasy 5</a></li><li  class=""><a href="/play/draw-games/daily-4">Daily 4</a></li><li  class=""><a href="/play/draw-games/daily-3">Daily 3</a></li><li  class=""><a href="/play/draw-games/daily-derby">Daily Derby</a></li><li  class=" last"><a href="/play/draw-games/hot-spot">Hot Spot</a></li></ul></li><li  class=""><a href="/play/jackpot-captain">Jackpot Captain</a></li><li  class=""><a href="https://secondchance.calottery.com/second-chance">2nd Chance</a></li><li  class="last"><a href="/play/whats-my-game">What's My Game Today?</a></li></ul>
+    
+
+<div class="box round">
+	<h3>Win $50 MILLION This Wednesday!</h3>
+	<a href="/play/draw-games/powerball">Get game details Â»</a>
+	<div class="decorate-img uppad">
+        <img src="http://static.www.calottery.com/~/media/Play/draw_games/Powerball/powerball_ad_module.png" alt="powerball" width="134" height="64" />
+    </div>
+	<div class="img-desc note">
+		Estimated for drawing Aug 14, 2013<br/>Estimated Cash Value: $28,900,000
+	</div>
+</div>
+
+<div class="round-no-color">
+	<div class="next-draw-top">
+	<h3>POWERBALL Draw Closes In:</h3>
+	<ul>
+        
+            <li class="day"><div>1</div>Days</li>
+        
+		<li class="hours"><div>21</div>Hours</li>
+		<li class="minutes"><div>43</div>Minutes</li>
+	</ul>
+	</div>
+	<div class="next-draw-bottom clearfix">
+	    <p>Draws take place every Wednesday and Saturday after<br/>draw entry closes at 7:00 p.m.</p>
+        <img src="http://static.www.calottery.com/~/media/Play/draw_games/Powerball/powerball_ad_module.png" class="float-right" alt="powerball" width="134" height="64" />
+        <p><a href="/lucky-retailers">Find a retailer >></a></p>
+	</div>
+    
+</div>
+</div>
+<!--
+
+CONTENT COLUMN
+
+-->
+<div id="main-column">
+    <!-- hero -->
+        
+    
+        
+    <section id="main-content" class="vert-divider-6">
+        <div id="content" class="grid-6">
+            
+
+<div>
+    <img src="http://static.www.calottery.com/~/media/Play/draw_games/Powerball/powerball_logo_play-landing-draw-games-landing.png" alt="powerball" width="126" height="61" />
+    <h1 class="winning-numbers">Past Winning Numbers</h1>
+</div>
+<div id="objBody_content_0_pagecontent_0_PnlNumberSearch">
+	
+    <span id="objBody_content_0_pagecontent_0_objNumberSearch_lblError" style="color:Red;"></span>
+    
+    <div class="box round basic_search">
+        <div action="#" method="get" name="winnerCheckForm" class="winning_number_search_box">      
+            <fieldset>
+                
+                    <h3>Are Your Favorite Numbers Lucky?</h3>
+                    <p>Enter your numbers below; pick a specific draw or all draws, and find out!</p>
+                
+                <ul class="no-list-format column grid-3" style="display: inline;">
+                    <li class="numberbox_wrapper">
+                        <input type="radio" name="enter_type" id="numbers" value="numbers" checked="checked" style="display:none;"/>
+                        <label for="numbers">
+                            Enter your numbers
+                        </label>
+                    </li>
+                    <li class="numberbox_wrapper">
+                        <label for="objBody_content_0_pagecontent_0_objNumberSearch_tbSearchNum1" id="objBody_content_0_pagecontent_0_objNumberSearch_SearchLabel1" class="visuallyhidden"></label>
+                <input name="objBody$content_0$pagecontent_0$objNumberSearch$tbSearchNum1" type="text" maxlength="2" id="objBody_content_0_pagecontent_0_objNumberSearch_tbSearchNum1" name="num_1" class="numberbox" />
+                <label for="objBody_content_0_pagecontent_0_objNumberSearch_tbSearchNum2" id="objBody_content_0_pagecontent_0_objNumberSearch_SearchLabel2" class="visuallyhidden"></label>
+                <input name="objBody$content_0$pagecontent_0$objNumberSearch$tbSearchNum2" type="text" maxlength="2" id="objBody_content_0_pagecontent_0_objNumberSearch_tbSearchNum2" name="num_2" class="numberbox" />
+                <label for="objBody_content_0_pagecontent_0_objNumberSearch_tbSearchNum3" id="objBody_content_0_pagecontent_0_objNumberSearch_SearchLabel3" class="visuallyhidden"></label>
+                <input name="objBody$content_0$pagecontent_0$objNumberSearch$tbSearchNum3" type="text" maxlength="2" id="objBody_content_0_pagecontent_0_objNumberSearch_tbSearchNum3" name="num_3" class="numberbox" />
+                <label for="objBody_content_0_pagecontent_0_objNumberSearch_tbSearchNum4" id="objBody_content_0_pagecontent_0_objNumberSearch_SearchLabel4" class="visuallyhidden"></label>
+                <input name="objBody$content_0$pagecontent_0$objNumberSearch$tbSearchNum4" type="text" maxlength="2" id="objBody_content_0_pagecontent_0_objNumberSearch_tbSearchNum4" name="num_4" class="numberbox" />
+                <label for="objBody_content_0_pagecontent_0_objNumberSearch_tbSearchNum5" id="objBody_content_0_pagecontent_0_objNumberSearch_SearchLabel5" class="visuallyhidden"></label>
+                <input name="objBody$content_0$pagecontent_0$objNumberSearch$tbSearchNum5" type="text" maxlength="2" id="objBody_content_0_pagecontent_0_objNumberSearch_tbSearchNum5" name="num_5" class="numberbox" />
+                        <div align="center">
+                            <input name="objBody$content_0$pagecontent_0$objNumberSearch$tbSearchMega" type="text" maxlength="2" id="objBody_content_0_pagecontent_0_objNumberSearch_tbSearchMega" class="powerball-numberbox specialnumberbox" name="num_6" />
+                            <label for="objBody_content_0_pagecontent_0_objNumberSearch_tbSearchMega" id="objBody_content_0_pagecontent_0_objNumberSearch_lblMega" class="past-winning-mega">POWER</label>
+                        </div>
+                       
+                    </li>
+                </ul>
+                <ul class="no-list-format column grid-2">
+                    <li class="numberbox_wrapper">
+                        <label for="objBody_content_0_pagecontent_0_objNumberSearch_ddlDrawDateNumber">Select Draw</label>
+                    </li>
+                    <li class="numberbox_wrapper">
+                        <select name="objBody$content_0$pagecontent_0$objNumberSearch$ddlDrawDateNumber" id="objBody_content_0_pagecontent_0_objNumberSearch_ddlDrawDateNumber" class="menu-drop">
+		<option value="">-----Any draw-----</option>
+		<option value="36">08/10/2013 Draw# 36</option>
+		<option value="35">08/07/2013 Draw# 35</option>
+		<option value="34">08/03/2013 Draw# 34</option>
+		<option value="33">07/31/2013 Draw# 33</option>
+		<option value="32">07/27/2013 Draw# 32</option>
+		<option value="31">07/24/2013 Draw# 31</option>
+		<option value="30">07/20/2013 Draw# 30</option>
+		<option value="29">07/17/2013 Draw# 29</option>
+		<option value="28">07/13/2013 Draw# 28</option>
+		<option value="27">07/10/2013 Draw# 27</option>
+		<option value="26">07/06/2013 Draw# 26</option>
+		<option value="25">07/03/2013 Draw# 25</option>
+		<option value="24">06/29/2013 Draw# 24</option>
+		<option value="23">06/26/2013 Draw# 23</option>
+		<option value="22">06/22/2013 Draw# 22</option>
+		<option value="21">06/19/2013 Draw# 21</option>
+		<option value="20">06/15/2013 Draw# 20</option>
+		<option value="19">06/12/2013 Draw# 19</option>
+		<option value="18">06/08/2013 Draw# 18</option>
+		<option value="17">06/05/2013 Draw# 17</option>
+
+	</select>
+                        
+                    </li>
+                </ul>
+                <ul class="no-list-format column grid-6 trigger" style="display: none;">
+                    <li class="numberbox_wrapper">
+                        <input type="radio" name="enter_type" id="numbers_trigger" value="numbers_trigger" /> 
+                        <label for="numbers">
+                            Enter your numbers
+                        </label>
+                    </li>
+                </ul>
+                <ul class="no-list-format column grid-6" style="display:none;">
+                    <li class="numberbox_wrapper">
+                        <input type="radio" name="enter_type" id="serial" value="serial" />
+                        <label for="serial">
+                            Or enter your Ticket Serial number <a href="#">Where do I find this?</a>
+                        </label>
+                        <input type="text" name="serial_number" id="serial_number" style="display: none;" /> 
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <span id="objBody_content_0_pagecontent_0_objNumberSearch_lblValid" style="color:Red;"></span>
+                <span style="color:Red">
+                    
+                    
+                    
+                    
+                </span><br />
+                <a id="objBody_content_0_pagecontent_0_objNumberSearch_btnSearchNumber" class="button" href="javascript:__doPostBack('objBody$content_0$pagecontent_0$objNumberSearch$btnSearchNumber','')">
+                    <span><span>Check</span></span>
+                </a>              
+                
+            </fieldset>
+        </div>
+    </div>
+    <!--
+    <div class="box round advanced_search" style="display: none;">
+        <div action="#" method="post" name="winnerCheckForm" class="winning_number_search_box">
+            <fieldset>
+                <legend>
+                    <h3 class="column grid-6">Search Winning-Numbers</h3>
+                </legend>
+                <ul class="no-list-format column grid-5">
+                    <li class="numberbox_wrapper grid-5">
+                        <input type="radio" name="enter_type" id="numbers" value="numbers" checked="checked" style="display:none;" /> 
+                        <label for="numbers">
+                            Enter your numbers
+                        </label>
+                    </li>
+                </ul>
+                <ul class="no-list-format column grid-5">
+                    <li class="numberbox_wrapper">
+                        <input type="text" class="numberbox" name="num_1[]" />
+                        <input type="text" class="numberbox" name="num_2[]" />
+                        <input type="text" class="numberbox" name="num_3[]" />
+                        <input type="text" class="numberbox" name="num_4[]" />
+                        <input type="text" class="numberbox" name="num_5[]" />
+                        <div>
+                            <input type="text" class="specialnumberbox" name="num_6[]" />
+                        </div>
+                        
+                        <div class="module_actions">
+                            <a href="#" class="add">Add</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="no-list-format column grid-5">
+                    <li class="numberbox_wrapper">
+                        <label for="start_date">
+                            Start Date</label><br />
+                        <input type="text" name="start_date" id="start_date" value="" />  </li>
+                    <li class="numberbox_wrapper">
+                        <label for="end_date">
+                            End Date</label><br />
+                        <input type="text" name="end_date" id="end_date" value="" />  </li>
+                </ul>
+                <ul class="no-list-format column grid-5">
+                    <li class="numberbox_wrapper">
+                        <label for="draw_number">
+                            Draw Number</label><br />
+                        <input type="text" name="draw_number" id="draw_number" value="" />
+                    </li>
+                </ul>
+                <ul class="no-list-format column grid-6 trigger" style="display: none;">
+                    <li class="numberbox_wrapper">
+                        <input type="radio" name="enter_type" id="numbers_trigger" value="numbers_trigger" /> 
+                        <label for="numbers">
+                            Enter your numbers
+                        </label>
+                    </li>
+                </ul>
+                
+                <ul class="no-list-format column grid-6" style="display:none;">
+                    <li class="numberbox_wrapper">
+                        <input type="radio" name="enter_type" id="serial" value="serial" />
+                        <label for="serial">
+                            Or enter your Ticket Serial number <a href="#">Where do I find this?</a>
+                        </label>
+                        <input type="text" name="serial_number" id="serial_number" style="display: none;" /> 
+                    </li>
+                </ul>
+                
+            </fieldset>
+            <fieldset class="buttons grid-align">
+                <a href="#" class="button"><span><span>Search</span></span></a>
+                <span><a href="#" class="basic_search_trigger">Basic Search</a></span>
+            </fieldset>
+        </div>
+    </div>
+    -->
+    <div id="objBody_content_0_pagecontent_0_objNumberSearch_PnlResults">
+
+	</div>
+
+</div>
+
+<div class="results">
+    <span id="objBody_content_0_pagecontent_0_objPastWinningNumbers_lblError" style="color:Red;"></span>
+    <div class="clearfix">
+        <a href="/sitecore/content/Miscellaneous/download-numbers/?GameName=powerball" class="download_numbers">Download all numbers</a>
+        <!-- AddThis Button BEGIN -->
+        
+<div class="addthis_toolbox addthis_default_style ">
+<p>Share:</p>
+<a class="addthis_button_email"></a>
+<a class="addthis_button_facebook"></a>
+<a class="addthis_button_twitter"></a>
+</div>
+<script type="text/javascript">    var addthis_config = { data_use_flash: false, data_use_cookies: false, data_ga_property: 'UA-576767-1', data_track_clickback: true };</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4dc1ddff3f68cab5"></script>
+ 
+        <!-- AddThis Button END -->
+    </div>
+    
+    <div class="clearfix">
+        <h3>Past Draw Results</h3>
+        <span id="objBody_content_0_pagecontent_0_objPastWinningNumbers_lblWhen" class="draw-games-when">As of 8/12/2013 9:16:44 PM</span>
+    </div>
+    <div class="pagination_group clearfix">
+            <p>Showing 1 to 20 of 36</p><ul class='pagination_actions'><li class='first'>« First</li><li>Prev</li><li class='current'>1</li><li><a href='/play/draw-games/powerball/winning-numbers/?page=2'>2</a></li><li><a href='/play/draw-games/powerball/winning-numbers/?page=2'>Next</a></li><li class='last'><a href='/play/draw-games/powerball/winning-numbers/?page=2'>Last »</a></li></ul>
+    </div>
+    
+            <table class='tag_even numbers' width='100%' border='0'><thead><tr><th>Draw</th><th>Winning Numbers</th><th class='center'>POWER</th></tr></thead>
+         
+            <tr>
+                <td>
+                    <a href="/play/draw-games/powerball/winning-numbers/?DrawDate=Aug 10, 2013&DrawNumber=36">
+                        <span id="objBody_content_0_pagecontent_0_objPastWinningNumbers_rptPast_ctl01_lblDrawDateNumber" title="36">Aug 10, 2013 - 36</span>
+                    </a>
+                </td>        
+                <td><span>37</span><span>58</span><span>14</span><span>04</span><span>12</span><span></span></td>
+                <td class="center">13</td>
+            </tr>
+         
+            <tr>
+                <td>
+                    <a href="/play/draw-games/powerball/winning-numbers/?DrawDate=Aug 07, 2013&DrawNumber=35">
+                        <span id="objBody_content_0_pagecontent_0_objPastWinningNumbers_rptPast_ctl02_lblDrawDateNumber" title="35">Aug 7, 2013 - 35</span>
+                    </a>
+                </td>        
+                <td><span>58</span><span>05</span><span>25</span><span>59</span><span>30</span><span></span></td>
+                <td class="center">32</td>
+            </tr>
+         
+            <tr>
+                <td>
+                    <a href="/play/draw-games/powerball/winning-numbers/?DrawDate=Aug 03, 2013&DrawNumber=34">
+                        <span id="objBody_content_0_pagecontent_0_objPastWinningNumbers_rptPast_ctl03_lblDrawDateNumber" title="34">Aug 3, 2013 - 34</span>
+                    </a>
+                </td>        
+                <td><span>24</span><span>36</span><span>21</span><span>45</span><span>42</span><span></span></td>
+                <td class="center">15</td>
+            </tr>
+         
+            <tr>
+                <td>
+                    <a href="/play/draw-games/powerball/winning-numbers/?DrawDate=Jul 31, 2013&DrawNumber=33">
+                        <span id="objBody_content_0_pagecontent_0_objPastWinningNumbers_rptPast_ctl04_lblDrawDateNumber" title="33">Jul 31, 2013 - 33</span>
+                    </a>
+                </td>        
+                <td><span>08</span><span>24</span><span>59</span><span>39</span><span>49</span><span></span></td>
+                <td class="center">5</td>
+            </tr>
+         
+            <tr>
+                <td>
+                    <a href="/play/draw-games/powerball/winning-numbers/?DrawDate=Jul 27, 2013&DrawNumber=32">
+                        <span id="objBody_content_0_pagecontent_0_objPastWinningNumbers_rptPast_ctl05_lblDrawDateNumber" title="32">Jul 27, 2013 - 32</span>
+                    </a>
+                </td>        
+                <td><span>58</span><span>53</span><span>40</span><span>23</span><span>09</span><span></span></td>
+                <td class="center">6</td>
+            </tr>
+         
+            <tr>
+                <td>
+                    <a href="/play/draw-games/powerball/winning-numbers/?DrawDate=Jul 24, 2013&DrawNumber=31">
+                        <span id="objBody_content_0_pagecontent_0_objPastWinningNumbers_rptPast_ctl06_lblDrawDateNumber" title="31">Jul 24, 2013 - 31</span>
+                    </a>
+                </td>        
+                <td><span>44</span><span>29</span><span>54</span><span>40</span><span>09</span><span></span></td>
+                <td class="center">7</td>
+            </tr>
+         
+            <tr>
+                <td>
+                    <a href="/play/draw-games/powerball/winning-numbers/?DrawDate=Jul 20, 2013&DrawNumber=30">
+                        <span id="objBody_content_0_pagecontent_0_objPastWinningNumbers_rptPast_ctl07_lblDrawDateNumber" title="30">Jul 20, 2013 - 30</span>
+                    </a>
+                </td>        
+                <td><span>14</span><span>27</span><span>58</span><span>25</span><span>38</span><span></span></td>
+                <td class="center">6</td>
+            </tr>
+         
+            <tr>
+                <td>
+                    <a href="/play/draw-games/powerball/winning-numbers/?DrawDate=Jul 17, 2013&DrawNumber=29">
+                        <span id="objBody_content_0_pagecontent_0_objPastWinningNumbers_rptPast_ctl08_lblDrawDateNumber" title="29">Jul 17, 2013 - 29</span>
+                    </a>
+                </td>        
+                <td><span>22</span><span>01</span><span>42</span><span>38</span><span>34</span><span></span></td>
+                <td class="center">17</td>
+            </tr>
+         
+            <tr>
+                <td>
+                    <a href="/play/draw-games/powerball/winning-numbers/?DrawDate=Jul 13, 2013&DrawNumber=28">
+                        <span id="objBody_content_0_pagecontent_0_objPastWinningNumbers_rptPast_ctl09_lblDrawDateNumber" title="28">Jul 13, 2013 - 28</span>
+                    </a>
+                </td>        
+                <td><span>08</span><span>37</span><span>02</span><span>35</span><span>22</span><span></span></td>
+                <td class="center">6</td>
+            </tr>
+         
+            <tr>
+                <td>
+                    <a href="/play/draw-games/powerball/winning-numbers/?DrawDate=Jul 10, 2013&DrawNumber=27">
+                        <span id="objBody_content_0_pagecontent_0_objPastWinningNumbers_rptPast_ctl10_lblDrawDateNumber" title="27">Jul 10, 2013 - 27</span>
+                    </a>
+                </td>        
+                <td><span>55</span><span>45</span><span>31</span><span>30</span><span>59</span><span></span></td>
+                <td class="center">27</td>
+            </tr>
+         
+            <tr>
+                <td>
+                    <a href="/play/draw-games/powerball/winning-numbers/?DrawDate=Jul 06, 2013&DrawNumber=26">
+                        <span id="objBody_content_0_pagecontent_0_objPastWinningNumbers_rptPast_ctl11_lblDrawDateNumber" title="26">Jul 6, 2013 - 26</span>
+                    </a>
+                </td>        
+                <td><span>52</span><span>02</span><span>36</span><span>35</span><span>13</span><span></span></td>
+                <td class="center">11</td>
+            </tr>
+         
+            <tr>
+                <td>
+                    <a href="/play/draw-games/powerball/winning-numbers/?DrawDate=Jul 03, 2013&DrawNumber=25">
+                        <span id="objBody_content_0_pagecontent_0_objPastWinningNumbers_rptPast_ctl12_lblDrawDateNumber" title="25">Jul 3, 2013 - 25</span>
+                    </a>
+                </td>        
+                <td><span>40</span><span>06</span><span>51</span><span>29</span><span>03</span><span></span></td>
+                <td class="center">4</td>
+            </tr>
+         
+            <tr>
+                <td>
+                    <a href="/play/draw-games/powerball/winning-numbers/?DrawDate=Jun 29, 2013&DrawNumber=24">
+                        <span id="objBody_content_0_pagecontent_0_objPastWinningNumbers_rptPast_ctl13_lblDrawDateNumber" title="24">Jun 29, 2013 - 24</span>
+                    </a>
+                </td>        
+                <td><span>28</span><span>08</span><span>56</span><span>53</span><span>30</span><span></span></td>
+                <td class="center">16</td>
+            </tr>
+         
+            <tr>
+                <td>
+                    <a href="/play/draw-games/powerball/winning-numbers/?DrawDate=Jun 26, 2013&DrawNumber=23">
+                        <span id="objBody_content_0_pagecontent_0_objPastWinningNumbers_rptPast_ctl14_lblDrawDateNumber" title="23">Jun 26, 2013 - 23</span>
+                    </a>
+                </td>        
+                <td><span>01</span><span>46</span><span>39</span><span>33</span><span>18</span><span></span></td>
+                <td class="center">33</td>
+            </tr>
+         
+            <tr>
+                <td>
+                    <a href="/play/draw-games/powerball/winning-numbers/?DrawDate=Jun 22, 2013&DrawNumber=22">
+                        <span id="objBody_content_0_pagecontent_0_objPastWinningNumbers_rptPast_ctl15_lblDrawDateNumber" title="22">Jun 22, 2013 - 22</span>
+                    </a>
+                </td>        
+                <td><span>33</span><span>57</span><span>19</span><span>23</span><span>13</span><span></span></td>
+                <td class="center">28</td>
+            </tr>
+         
+            <tr>
+                <td>
+                    <a href="/play/draw-games/powerball/winning-numbers/?DrawDate=Jun 19, 2013&DrawNumber=21">
+                        <span id="objBody_content_0_pagecontent_0_objPastWinningNumbers_rptPast_ctl16_lblDrawDateNumber" title="21">Jun 19, 2013 - 21</span>
+                    </a>
+                </td>        
+                <td><span>57</span><span>47</span><span>46</span><span>52</span><span>07</span><span></span></td>
+                <td class="center">17</td>
+            </tr>
+         
+            <tr>
+                <td>
+                    <a href="/play/draw-games/powerball/winning-numbers/?DrawDate=Jun 15, 2013&DrawNumber=20">
+                        <span id="objBody_content_0_pagecontent_0_objPastWinningNumbers_rptPast_ctl17_lblDrawDateNumber" title="20">Jun 15, 2013 - 20</span>
+                    </a>
+                </td>        
+                <td><span>48</span><span>55</span><span>28</span><span>40</span><span>36</span><span></span></td>
+                <td class="center">1</td>
+            </tr>
+         
+            <tr>
+                <td>
+                    <a href="/play/draw-games/powerball/winning-numbers/?DrawDate=Jun 12, 2013&DrawNumber=19">
+                        <span id="objBody_content_0_pagecontent_0_objPastWinningNumbers_rptPast_ctl18_lblDrawDateNumber" title="19">Jun 12, 2013 - 19</span>
+                    </a>
+                </td>        
+                <td><span>22</span><span>16</span><span>42</span><span>23</span><span>55</span><span></span></td>
+                <td class="center">32</td>
+            </tr>
+         
+            <tr>
+                <td>
+                    <a href="/play/draw-games/powerball/winning-numbers/?DrawDate=Jun 08, 2013&DrawNumber=18">
+                        <span id="objBody_content_0_pagecontent_0_objPastWinningNumbers_rptPast_ctl19_lblDrawDateNumber" title="18">Jun 8, 2013 - 18</span>
+                    </a>
+                </td>        
+                <td><span>02</span><span>26</span><span>11</span><span>32</span><span>22</span><span></span></td>
+                <td class="center">19</td>
+            </tr>
+         
+            <tr>
+                <td>
+                    <a href="/play/draw-games/powerball/winning-numbers/?DrawDate=Jun 05, 2013&DrawNumber=17">
+                        <span id="objBody_content_0_pagecontent_0_objPastWinningNumbers_rptPast_ctl20_lblDrawDateNumber" title="17">Jun 5, 2013 - 17</span>
+                    </a>
+                </td>        
+                <td><span>04</span><span>36</span><span>26</span><span>33</span><span>55</span><span></span></td>
+                <td class="center">32</td>
+            </tr>
+        
+            </table>
+        
+    <div id="objBody_content_0_pagecontent_0_objPastWinningNumbers_divTopBar" class="pagination_group clearfix">
+        <p>Showing 1 to 20 of 36</p><ul class='pagination_actions'><li class='first'>« First</li><li>Prev</li><li class='current'>1</li><li><a href='/play/draw-games/powerball/winning-numbers/?page=2'>2</a></li><li><a href='/play/draw-games/powerball/winning-numbers/?page=2'>Next</a></li><li class='last'><a href='/play/draw-games/powerball/winning-numbers/?page=2'>Last »</a></li></ul>
+    </div>
+</div>
+
+<!-- AddThis Button BEGIN -->
+ 
+<div class="addthis_toolbox addthis_default_style ">
+<p>Share:</p>
+<a class="addthis_button_email"></a>
+<a class="addthis_button_facebook"></a>
+<a class="addthis_button_twitter"></a>
+</div>
+<script type="text/javascript">    var addthis_config = { data_use_flash: false, data_use_cookies: false, data_ga_property: 'UA-576767-1', data_track_clickback: true };</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4dc1ddff3f68cab5"></script>
+
+<!-- AddThis Button END -->
+        </div>
+        <!--
+
+        RIGHT COLUMN
+
+        -->
+        <aside id="right-column">
+			
+
+<div class="no-pad">
+    <h3>96 Cents of Every $1 Goes Back to the Community</h3>
+    <p>
+		<p>More than 96 cents of every dollar spent by our players goes back to the community.</p>
+</p>
+    <p><a href="/giving-back/lottery-funds-at-work">See where the money goes »</a></p>
+</div>
+
+
+		</aside>
+    </section>     
+</div>
+
+<script type="text/javascript">
+    require(["pages/landing_page"]);
+</script>
+        
+
+    
+    
+        <div id="winning_number_dialog_target" class="{'reloadOnActivate':true}"></div>
+    
+</div>
+
+            
+        </div>
+    </div>
+    
+<footer>
+    <div class='wrapper clearfix'>
+        <div id='footer-content'>
+            <!-- I AM -->
+            <div class='column grid-3'>
+    		    <h3>I'm a</h3>
+    		    <ul class='footer-nav'>
+                        
+		                    <li>
+		                        <a id="ctl08_rptIm_ctl00_lnkURL" href="/play">Player</a>
+		                    </li>
+                            
+		                    <li>
+		                        <a id="ctl08_rptIm_ctl01_lnkURL" href="/win/claiming-prizes">Winner! Now what?</a>
+		                    </li>
+                            
+		                    <li>
+		                        <a id="ctl08_rptIm_ctl02_lnkURL" href="/retailer">Retailer or Want to Be One</a>
+		                    </li>
+                            
+		                    <li>
+		                        <a id="ctl08_rptIm_ctl03_lnkURL" href="/media">Journalist</a>
+		                    </li>
+                            
+		                    <li>
+		                        <a id="ctl08_rptIm_ctl04_lnkURL" href="/about-us/careers">Job Seeker</a>
+		                    </li>
+                            
+		                    <li>
+		                        <a id="ctl08_rptIm_ctl05_lnkURL" href="/vendors">Vendor or Want to Be One</a>
+		                    </li>
+                        
+                </ul>
+          	</div>
+            <!-- HELP ME -->
+            <div class='column grid-3'>
+    		    <h3>Help Me</h3>
+    		    <ul class='footer-nav'>
+                    
+		                <li>
+		                        <a id="ctl08_rptHelpMe_ctl00_lnkURL" href="/lucky-retailers/more-ways-to-buy">Find More Ways to Buy</a>
+		                </li>
+                        
+		                <li>
+		                        <a id="ctl08_rptHelpMe_ctl01_lnkURL" href="/play/whats-my-game">Pick A Game</a>
+		                </li>
+                        
+		                <li>
+		                        <a id="ctl08_rptHelpMe_ctl02_lnkURL" href="/play-responsibly">Play Responsibly</a>
+		                </li>
+                        
+		                <li>
+		                        <a id="ctl08_rptHelpMe_ctl03_lnkURL" href="/contact-us">Contact the Lottery</a>
+		                </li>
+                        
+		                <li>
+		                        <a id="ctl08_rptHelpMe_ctl04_lnkURL" href="/supported-browsers">See Supported Browsers</a>
+		                </li>
+                        
+		                <li>
+		                        <a id="ctl08_rptHelpMe_ctl05_lnkURL" href="/accessibility">View the Site Better</a>
+		                </li>
+                    
+                </ul>
+          	</div>
+            <!-- SHOW ME -->
+            <div class='column grid-3'>
+    		    <h3>Show Me</h3>
+    		    <ul class='footer-nav'>
+                        
+		                    <li>
+		                        <a id="ctl08_rptShowMe_ctl00_lnkURL" href="/win/winning-numbers">Winning Numbers</a>
+		                    </li>
+                            
+		                    <li>
+		                        <a id="ctl08_rptShowMe_ctl01_lnkURL" href="/play/scratchers-games/end-of-game-info">Scratchers Games End of Game Info</a>
+		                    </li>
+                            
+		                    <li>
+		                        <a id="ctl08_rptShowMe_ctl02_lnkURL" href="/win/claiming-prizes">How To Claim Prizes</a>
+		                    </li>
+                            
+		                    <li>
+		                        <a id="ctl08_rptShowMe_ctl03_lnkURL" href="/win/winners-stories">Recent Winners</a>
+		                    </li>
+                            
+		                    <li>
+		                        <a id="ctl08_rptShowMe_ctl04_lnkURL" href="/media/fact-sheets/games">Odds Of Winning</a>
+		                    </li>
+                            
+		                    <li>
+		                        <a id="ctl08_rptShowMe_ctl05_lnkURL" href="/giving-back/lottery-funds-at-work">Where the Money Goes</a>
+		                    </li>
+                            
+		                    <li>
+		                        <a id="ctl08_rptShowMe_ctl06_lnkURL" href="/contact-us/contact-us-faqs">Frequently Asked Questions</a>
+		                    </li>
+                            
+		                    <li>
+		                        <a id="ctl08_rptShowMe_ctl07_lnkURL" href="/about-us/website-tour">Whatâ€™s New on the Website</a>
+		                    </li>
+                        
+                </ul>
+          	</div>
+            <!-- CONNECT WITH US -->
+            <div class='column grid-3'>
+                
+		<h3>Connect with Us</h3>
+    <ul id="footer-badges">
+      <li class="facebook">
+        <a title="facebook for CA Lottery" href="http://www.facebook.com/calottery" target="_blank">CA Lottery on Facebook</a> </li>
+      <li class="twitter">
+        <a title="twitter for CA Lottery" href="http://twitter.com/calottery" target="_blank">CA Lottery on Twitter</a> </li>
+      <li class="youtube">
+        <a title="Youtube for CA Lottery" href="http://www.youtube.com/user/CaliforniaLottery" target="_blank">CA Lottery on YouTube</a> </li>
+    </ul>
+    <p>
+      <a href="/contact-us/jackpot-alert-email">Sign up for alerts</a> </p>
+    <p>
+      <a class="button" href="/sled">
+        <span>
+          <span>Security & Law Enforcement</span> </span>
+      </a>
+    </p>
+    <p>
+      <a class="button" href="/media/press-releases">
+        <span>
+          <span>Lottery News</span> </span>
+      </a>
+    </p>
+                <p>
+                    <a href="/about-us/lottery-performance/wla-certification">
+                        <img id="ctl08_ctl00_Image1" src="http://static.www.calottery.com/~/media/Footer_Pages/wlalogo.png" alt="WLA Certification" style="height:70px;width:140px;border-width:0px;" />
+                    </a>
+                </p>
+            </div>
+            <div class='row' id='footer-notices'>
+                <a href="/" id='footer-logo' style="background: url('http://static.www.calottery.com/~/media/HomePage/logo-calottery.ashx') " >CA Lottery Home</a>
+                
+		<p>
+      <span>Must be 18 to Play</span> | <a href="/win/unclaimed-prizes">Unclaimed Prizes</a> | <a href="/terms-of-service">Terms of Service</a> | <a href="/privacy-policy">Privacy Policy</a> | <a href="/site-map">Site Map</a> | <a class="last" href="/contact-us/contact-us-faqs">FAQs</a></p>
+
+            </div>
+        </div>
+    </div>
+    <div class='page'>
+        
+		<p id="footer-links">
+      <span>Â©2013 California State Lottery</span> | <a href="http://gov.ca.gov/" target="_blank">Governor Edmund G. Brown Jr.</a> | <a href="http://www.ca.gov/" target="_blank">My California.gov</a> | <a class="last" href="http://problemgambling.securespsites.com/ccpgwebsite/default.aspx" target="_blank">Problem Gambling Help</a></p>
+
+    </div>
+</footer>
+    
+    <input type="hidden" name="hLOCAL_ADDR" id="hLOCAL_ADDR" value="10.122.168.134" />
+    
+    </form>
+    
+    <script type="text/javascript">
+        require(["order!jquery","order!jqueryui","modules/global"]);
+
+        if(navigator.userAgent.match(/Android/i)) {
+            $('body').addClass('android');
+        } else if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/iPad/i)) {
+            $('body').addClass('ios');
+        }
+
+        function endRequestHandler(sender, args) {
+            var $select = jQuery(".game-bar-pick");
+
+            if ($select.length > 0) {
+                $select.bind('fixGameBarEvent', function (e) {
+                    if (jQuery('.ui-selectmenu-status').length <= 0) {
+                        try {
+                            $select.selectmenu({ style: 'dropdown' });
+                        } catch (e) { }
+                    }
+                });
+
+                $select.trigger('fixGameBarEvent');
+            }
+        }
+
+        try {
+            //if(typeof Sys.WebForms == "undefined")  throw new Error('Sys.WebForms is undefined');
+            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(endRequestHandler);
+        } catch(e){}
+    </script>
+    <script type="text/javascript">
+        var _gaq = [["_setAccount", "UA-576767-1"], ["_setDomainName", "none"], ["_setAllowLinker", true], ["_trackPageview"]];
+        (function (d, t) {
+            var g = d.createElement(t), s = d.getElementsByTagName(t)[0]; g.async = 1;
+            g.src = ("https:" == location.protocol ? "//ssl" : "//www") + ".google-analytics.com/ga.js";
+            s.parentNode.insertBefore(g, s)
+        } (document, "script"));
+    </script>
+</body>
+</html>
