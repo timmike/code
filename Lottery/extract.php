@@ -1,23 +1,6 @@
 <?php 
 
-$array = [[45,23,4], [1,2,1]];
 
-$count     = array_map('count', $array);
-$finalSize = array_product($count);
-$arraySize = count($array);
-$output    = array_fill(0, $finalSize, []);
-$i = 0;
-$c = 0;
-for (; $i < $finalSize; $i++) {
-    for ($c = 0; $c < $arraySize; $c++) {
-        $output[$i][] = $array[$c][$i % $count[$c]];
-    }
-}
-echo "<pre>";
-print_r($output);
-echo "</pre>";
-
-exit;
 require_once 'db_connect.php';
 
 $db = new db_connect();
@@ -58,7 +41,43 @@ echo '<pre>';
 print_r($low);
 echo '</pre>';
 
+$result = array(); 
+$combination = array();
 
+function combinations(array $myArray, $choose) {
+  global $result, $combination;
+
+  $n = count($myArray);
+
+  function inner ($start, $choose_, $arr, $n) {
+    global $result, $combination;
+
+    if ($choose_ == 0) array_push($result,$combination);
+    else for ($i = $start; $i <= $n - $choose_; ++$i) {
+           array_push($combination, $arr[$i]);
+           inner($i + 1, $choose_ - 1, $arr, $n);
+           array_pop($combination);
+         }
+  }
+  inner(0, $choose, $myArray, $n);
+  return $result;
+}
+
+
+//print_r(array_keys($high));
+$result = combinations(array_keys($high), 3);
+$res = array();
+foreach($result as $key => $value){
+	foreach($numbers as $kk => $vv){
+		$data = explode(' ', $vv['number']);
+		if(in_array($value[0], $data) && in_array($value[1], $data) && in_array($value[2], $data)){
+			$res = $value;
+		}
+	}
+}
+
+print_r($res);
+exit;
 $db->setTable('powerball');
 
 $numbers = $db->read();
