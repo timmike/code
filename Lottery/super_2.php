@@ -69,7 +69,7 @@ foreach($result as $key => $value){
 	foreach($numbers as $kk => $vv){
 		$data = explode(' ', $vv['number']);
 		if(!in_array($value[0], $data) && !in_array($value[1], $data) && !in_array($value[2], $data)){
-			$res = $value;
+			$res[] = $value;
 		}
 	}
 }
@@ -77,5 +77,7 @@ foreach($result as $key => $value){
 echo '<pre>';
 print_r($res);
 echo '</pre>';
+exit;
+
 
 
