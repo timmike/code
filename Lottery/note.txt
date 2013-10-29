@@ -1,0 +1,26 @@
+Main page
+Show the most ecent results
+[5 months] update
+
+
+Page1
+
+Option1
+	Criteria (random, frequent, less frequent, )
+	Time frame(last week,month,year, other(by day))
+Generate (button)
+
+display box have a list of generated numbers [x-x-x-x remove]
+
+
+
+Page2-enter your lottery tocker
+type - date -numbers 
+List -add/remove entries
+
+
+Page3-re-tner for 2nd chance of winning?
+
+
+**note
+find another site, match number and alert which databse are not correct.
