@@ -70,6 +70,7 @@ foreach($result as $key => $value){
 		$data = explode(' ', $vv['number']);
 		if(!in_array($value[0], $data) && !in_array($value[1], $data) && !in_array($value[2], $data)){
 			$res[] = $value;
+			break;
 		}
 	}
 }

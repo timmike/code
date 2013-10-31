@@ -64,12 +64,14 @@ $low = array_slice($res, -10,10, true);
 
 
 $result = combinations(array_keys($low), 3);
+
 $res = array();
 foreach($result as $key => $value){
 	foreach($numbers as $kk => $vv){
 		$data = explode(' ', $vv['number']);
 		if(!in_array($value[0], $data) && !in_array($value[1], $data) && !in_array($value[2], $data)){
 			$res[] = $value;
+			break;
 		}
 	}
 }

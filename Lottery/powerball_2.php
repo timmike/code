@@ -50,7 +50,7 @@ arsort($res);
 //print_r($res);
 //echo "</pre>";
 
-$high = array_slice($res, 0,10, true);
+$high = array_slice($res, 0,12, true);
 
 //echo '<pre>';
 //print_r($high);
@@ -70,6 +70,7 @@ foreach($result as $key => $value){
 		$data = explode(' ', $vv['number']);
 		if(!in_array($value[0], $data) && !in_array($value[1], $data) && !in_array($value[2], $data)){
 			$res[] = $value;
+			break;
 		}
 	}
 }

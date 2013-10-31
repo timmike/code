@@ -50,14 +50,17 @@ arsort($res);
 //print_r($res);
 //echo "</pre>";
 
-$high = array_slice($res, 0,10, true);
+$high = array_slice($res, 0,12, true);
 
 //echo '<pre>';
 //print_r($high);
 //echo '</pre>';
 
-$low = array_slice($res, -10,10, true);
-
+$low = array_slice($res, -12,12, true);
+echo '<pre>';
+print_r($low);
+echo '</pre>';
+exit;
 //echo '<pre>';
 //print_r($low);
 //echo '</pre>';
