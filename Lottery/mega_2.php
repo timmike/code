@@ -56,7 +56,8 @@ $high = array_slice($res, 0,10, true);
 //print_r($high);
 //echo '</pre>';
 
-$low = array_slice($res, -10,10, true);
+$low = array_slice($res, -12,12, true);
+
 
 //echo '<pre>';
 //print_r($low);
@@ -65,19 +66,29 @@ $low = array_slice($res, -10,10, true);
 
 $result = combinations(array_keys($low), 3);
 
+
 $res = array();
 foreach($result as $key => $value){
+		$res[$key] = 0;
 	foreach($numbers as $kk => $vv){
 		$data = explode(' ', $vv['number']);
 		if(!in_array($value[0], $data) && !in_array($value[1], $data) && !in_array($value[2], $data)){
-			$res[] = $value;
-			break;
+			$res[$key]++;
 		}
 	}
 }
 
+asort($res);
 echo '<pre>';
 print_r($res);
 echo '</pre>';
+
+print_r($result[1])."<br />";
+print_r($result[55])."<br />";
+print_r($result[11])."<br />";
+print_r($result[64])."<br />";
+
+
+
 
 

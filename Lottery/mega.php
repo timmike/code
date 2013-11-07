@@ -24,7 +24,7 @@ require_once 'db_connect.php';
 
 $db = new db_connect();
 
-$db->setTable('mega-millions');
+$db->setTable('superlotto-plus');
 
 $numbers = $db->read();
 
@@ -50,36 +50,42 @@ arsort($res);
 //print_r($res);
 //echo "</pre>";
 
-$high = array_slice($res, 0,12, true);
+$high = array_slice($res, 0,10, true);
+echo '<pre>';
+print_r($high);
+echo '</pre>';
 
 //echo '<pre>';
 //print_r($high);
 //echo '</pre>';
 
 $low = array_slice($res, -12,12, true);
-echo '<pre>';
-print_r($low);
-echo '</pre>';
-exit;
-//echo '<pre>';
-//print_r($low);
-//echo '</pre>';
+
 
 
 $result = combinations(array_keys($high), 3);
+
 $res = array();
 foreach($result as $key => $value){
+	$res[$key] = 0;
 	foreach($numbers as $kk => $vv){
 		$data = explode(' ', $vv['number']);
 		if(in_array($value[0], $data) && in_array($value[1], $data) && in_array($value[2], $data)){
-			$res[] = $value;
+			$res[$key]++;
 		}
 	}
 }
 
+
+arsort($res);
 echo '<pre>';
 print_r($res);
 echo '</pre>';
+
+print_r($result[109]);
+print_r($result[44]);
+print_r($result[105]);
+
 
 
 
