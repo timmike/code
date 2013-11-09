@@ -65,14 +65,12 @@ $(document).ready(function(){
 
 $str = 'apple bee cat dog';
 
- $data = "The cat likes to sit on the fence. He also likes to climb the tree."; 
  
  $find ="/bee|dog/"; 
  $replace =""; 
  
- //1. replace single word 
- Echo "$data <br>"; 
- Echo preg_replace ($find, $replace, $str); 
+
+ echo preg_replace ($find, $replace, $str); 
 
 
 ?>
