@@ -1,0 +1,60 @@
+We'll focus on 4 mains Sites Domains(Gmail,AOL,ATT, Other)
+
+1) load sendmail.sql and domain sql into databse
+2) run deployment.php
+
+Campaign Management
+
+New Info
+In Campaign when you click "New info", a new window will pop up and allows you to add offer info.
+Offer (Online Dating-Match.com)
+Domain (Gmail)
+Advertiser (name of advertiser)
+Network (network of advertiser)
+Cluster (Like server group, currently we only need cluster 1 for server1-10)
+template (databse of email template like 8bit, 16bit and different styles of templates)
+
+
+New Campaign
+Once you added Info you can create a campaign from the dropdown.
+
+
+
+
+
+Deployment Management
+
+Domain Management
+We must be able to save our (from and redirect) domains for each site Domains(Gmail,AOl)
+Please add a dropdown for the domains, so chichi is for yahoo, facebook is for gmail and sleep.net for ATT and so on.
+Choose domains
+choose redirect
+choose Ips
+
+Example email
+From: sales@chichi.com
+To: target@gmail.com
+
+Click here to get your free stuff <a href="redirect.com">click</a>
+
+
+Template Management
+top left allows you to choose the template, There's a dropdown to let you choose to display the templates created today or within 7 days depends on how you filter it.
+
+Template Generator allows you to choose the frome line and subject line provided by the advertiser.
+Template style is the template we create in the info tab
+
+At the bottom you can choose the templates saved on the remote drive
+Once you made an update, a rendered page will be shown on the right.
+
+
+
+Test & Send
+1) choose creative
+2) Choose templates, 1 createive can have multiple templates
+3) choose volume to be tested
+4) choose list(see below) to be mailed.
+   -This is another big part. We must be able to compare our list against the advertiser's list to create a new list for deployment.
+
+Bulk setup is a scheduleing mail. 
+

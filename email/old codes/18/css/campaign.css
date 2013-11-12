@@ -1,0 +1,191 @@
+#mask {
+	display: none;
+	background: #000; 
+	position: fixed; left: 0; top: 0; 
+	z-index: 10;
+	width: 100%; height: 100%;
+	opacity: 0.8;
+	z-index: 999;
+}
+
+.campaignCategory-popup,.creative-popup,.linkId-popup{
+	display:none;
+	background: #333;
+	padding: 10px; 	
+	border: 2px solid #ddd;
+	float: left;
+	font-size: 1.2em;
+	position: fixed;
+	top: 50%; left: 50%;
+	z-index: 99999;
+	box-shadow: 0px 0px 20px #999;
+	-moz-box-shadow: 0px 0px 20px #999; /* Firefox */
+    -webkit-box-shadow: 0px 0px 20px #999; /* Safari, Chrome */
+	border-radius:3px 3px 3px 3px;
+    -moz-border-radius: 3px; /* Firefox */
+    -webkit-border-radius: 3px; /* Safari, Chrome */
+}
+
+
+img.btn_close {
+	float: right; 
+	margin: -28px -28px 0 0;
+}
+
+#campaignCategory fieldset { 
+	border:none; 
+}
+
+form.campaignCategory .textbox label { 
+	display:block; 
+	padding-bottom:7px; 
+}
+
+form.campaignCategory .textbox span { 
+	display:block;
+}
+
+form.campaignCategory p, form.campaignCategory span { 
+	color:#999; 
+	font-size:11px; 
+	line-height:18px;
+} 
+
+form.campaignCategory .textbox input { 
+	background:#666666; 
+	border-bottom:1px solid #333;
+	border-left:1px solid #000;
+	border-right:1px solid #333;
+	border-top:1px solid #000;
+	color:#fff; 
+	border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+	font:13px Arial, Helvetica, sans-serif;
+	padding:2px 6px 2px;
+	width:200px;
+}
+
+form.campaignCategory input:-moz-placeholder { color:#bbb; text-shadow:0 0 2px #000; }
+form.campaignCategory input::-webkit-input-placeholder { color:#bbb; text-shadow:0 0 2px #000;  }
+
+.button { 
+	background: -moz-linear-gradient(center top, #f3f3f3, #dddddd);
+	background: -webkit-gradient(linear, left top, left bottom, from(#f3f3f3), to(#dddddd));
+	background:  -o-linear-gradient(top, #f3f3f3, #dddddd);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f3f3f3', EndColorStr='#dddddd');
+	border-color:#000; 
+	border-width:1px;
+	border-radius:4px 4px 4px 4px;
+	-moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+	color:#333;
+	cursor:pointer;
+	display:inline-block;
+	padding:6px 6px 4px;
+	margin-top:10px;
+	font:12px; 
+	width:214px;
+}
+
+.button:hover { background:#ddd; }
+
+
+/**********Campaign Management*******/
+/*#campaign{height:450px;}*/
+
+
+
+
+#campaign table{
+	border:1px solid black;
+	background-color:#C2C2A3;
+}
+
+#campaign table td{padding-right:10px;}
+
+#campaign table label{
+	float:right;
+}
+
+#campaign table select{
+	width:150px;
+}
+
+#campaign table .options input{
+	width:55px;
+}
+
+
+
+#campaignInfoSelction{float:left;}
+
+.campaignListSubMenu{
+	background-color:#F1F8E0;
+	width:19%;
+	height:25%;
+	position:fixed;
+	margin:0;
+	overflow-y: scroll;
+	font-size: 85%;
+	z-index: 999;
+}
+
+.submenu{margin:0 !important;top:0 !important;}
+
+.creative-popup label{font-size:70%;}
+.creative-popup td{width:120px;}
+
+.saving {width:100%;height:100%;
+		z-index:999;
+		display:block;
+		background-color:black;
+		opacity:0.6;
+		top:0;left:0;
+		position:absolute;
+}
+.savingGif {
+	position:relative;
+ 	display:block;
+	background: url("../images/saving.gif") 100% 100% no-repeat;
+	width: 50%; /*or your image's width*/
+	height: 50%; /*or your image's height*/
+}
+
+
+#campaignList,#campaignInfo,#creativeInfo{
+	position:relative;
+	height:200px;
+	width:40%;
+	background-color:#CCCCB2;
+	overflow-x: hidden;
+	min-width:250px;
+	margin-bottom:5px;
+}
+
+#campaignInfo,#creativeInfo{background-color:#E3E4FA;height:50%;}
+
+
+#campaignList  div:nth-child(odd){background-color:#DEFFC7;}
+#campaignList div:hover{background:#8ECAFB;opacity:0.6;cursor:pointer;}
+#campaignList ul{width:16%;height:19px;overflow:hidden;display:inline-block;padding: 2px 0 0 2px;font-size:90%;}
+.campignInfoDiv input,label{display:inline-block;width:40%;padding-right:10px;}
+.capitalize { text-transform: capitalize; text-align: right;}
+
+.creativeInfoDiv input,label{display:inline-block;width:40%;padding-right:20px;}
+#creativeInfo .creativeLists:hover{background:#8ECAFB;opacity:0.6;cursor:pointer;}
+#creativeInfo{max-height:150px;}
+.creativeLists ul{width:30%;height:19px;overflow:hidden;display:inline-block;padding: 2px 0 0 2px;}
+
+
+#linklist{float:right;width:50%;height:100%;margin-right:5%;background-color:#E0FFFF;max-height:550px;overflow:scroll;}
+/*#linklist{float:right;margin-right:5%;background-color:blue;}*/
+
+/*
+.linkId_image{float:left;}
+.linkId_image{float:left;}
+*/
+.div_linkIdGroup div{border-top:1px solid black;}
+
+.div_linkIdGroup a,.div_linkIdGroup label{display:block;}
+
