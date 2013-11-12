@@ -1,5 +1,16 @@
 We'll focus on 4 mains Sites Domains(Gmail,AOL,ATT, Other)
 
+1 Campaign can have multiple createive, and 1 create creative can have multiple templates
+
+Match.com (campaign)
+(creative xMas pictures different contents)
+xMax(Creative)
+(Template1, different content different subject line)
+(Template2, same content but maybe different style of templates)
+
+Sample tempalte is in the template folder 1234-a.tpl
+
+
 1) load sendmail.sql and domain sql into databse
 2) run deployment.php
 
