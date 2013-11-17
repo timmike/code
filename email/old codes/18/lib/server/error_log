@@ -1,0 +1,24 @@
+[13-Mar-2013 12:53:35] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'chichio1_advertise.campaign_linkid' doesn't exist' in /home7/chichio1/public_html/ad/class/track_request_pdo.php:30
+Stack trace:
+#0 /home7/chichio1/public_html/ad/class/track_request_pdo.php(30): PDOStatement->execute(Array)
+#1 /home7/chichio1/public_html/ad/ad.php(14): mysql_pdo->getLinkAsset(Array)
+#2 {main}
+  thrown in /home7/chichio1/public_html/ad/class/track_request_pdo.php on line 30
+[13-Mar-2013 12:54:08] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'chichio1_advertise.campaign_linkid' doesn't exist' in /home7/chichio1/public_html/ad/class/track_request_pdo.php:30
+Stack trace:
+#0 /home7/chichio1/public_html/ad/class/track_request_pdo.php(30): PDOStatement->execute(Array)
+#1 /home7/chichio1/public_html/ad/ad.php(14): mysql_pdo->getLinkAsset(Array)
+#2 {main}
+  thrown in /home7/chichio1/public_html/ad/class/track_request_pdo.php on line 30
+[13-Mar-2013 12:54:21] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'chichio1_advertise.campaign_linkid' doesn't exist' in /home7/chichio1/public_html/ad/class/track_request_pdo.php:30
+Stack trace:
+#0 /home7/chichio1/public_html/ad/class/track_request_pdo.php(30): PDOStatement->execute(Array)
+#1 /home7/chichio1/public_html/ad/ad.php(14): mysql_pdo->getLinkAsset(Array)
+#2 {main}
+  thrown in /home7/chichio1/public_html/ad/class/track_request_pdo.php on line 30
+[13-Mar-2013 12:54:35] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'chichio1_advertise.campaign_linkid' doesn't exist' in /home7/chichio1/public_html/ad/class/track_request_pdo.php:30
+Stack trace:
+#0 /home7/chichio1/public_html/ad/class/track_request_pdo.php(30): PDOStatement->execute(Array)
+#1 /home7/chichio1/public_html/ad/ad.php(14): mysql_pdo->getLinkAsset(Array)
+#2 {main}
+  thrown in /home7/chichio1/public_html/ad/class/track_request_pdo.php on line 30
