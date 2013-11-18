@@ -7,7 +7,9 @@ class Database {
   private $_connection;
   // Store the single instance.
   private static $_instance;
-  
+	
+	private static $_table;
+
   /**
    * Get an instance of the Database.
    * @return Database 
@@ -41,4 +43,42 @@ class Database {
   public function getConnection() {
     return $this->_connection;
   }
+	
+	public function getTable()
+	{
+		return self::$_table;
+	}
+	
+	public static function setTable($the_table)
+	{
+		self::$_table = $the_table;
+	}
+	
+	public static function display()
+	{
+		$result = mysqli_query(self::getInstance()->getConnection(), 'select * from '.self::$_table.'');
+		$rows = mysqli_fetch_array($result,MYSQL_ASSOC);
+		return $rows;
+	}
+	
+	public static function insert($fields)
+	{
+		$q = ' insert into '.strtolower(self::$_table).'(';
+		$keys = array_keys($fields);
+		foreach($keys as $vv){
+			$q .= strtolower($vv).',';
+		}
+		$q = rtrim($q, ",");
+		$q .= ')values(';
+		
+		$values = array_values($fields);
+		foreach($values as $vv){
+			$q .= '"'.strtolower($vv).'",';
+		}
+		$q = rtrim($q, ",");
+		$q .= ')';
+		
+		$result = mysqli_query(self::getInstance()->getConnection(), $q);
+	}
+	
 }

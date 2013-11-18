@@ -13,6 +13,8 @@ class domains extends Database
 	{
 		parent::__construct();
 	}
+	
+
 }
 
 
