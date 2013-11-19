@@ -77,12 +77,10 @@ class campagins extends Database
 
 if(!empty($_POST['submit_campagin'])){
 	
-	$campagins = array("campagins"=> $_POST);
+	$campagins = array("campagins"=>$_POST);
 	$factory = new Factory($campagins);
 	$campagin = $factory->get_obj();
 	$campagin->setTable('campagin');	
-	//var_dump($campagin->get_form_values());
-	//exit;
 	$campagin->insert($campagin->get_form_values());
 	header("location:index.php");
 	exit;

@@ -43,8 +43,13 @@ echo '<table border="1">
 if(!empty($camps)){
 	foreach($camps as $key => $value){
 		echo '<tr>';
-		foreach($value as $vv){
-			echo '<td>'.$vv.'</td>';
+		foreach($value as $key => $vv){
+			if($key == 'id'){
+				echo '<td><a href="displayCreative.php?campagin_id='.$vv.'">'.$vv.'</td></a>';
+			}
+			else{
+				echo '<td>'.$vv.'</td>';
+			}
 		}
 		echo '</tr>';
 	}
