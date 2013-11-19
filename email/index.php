@@ -13,7 +13,6 @@ $rows= domains::display();
 
 ?>
 
-
 <form action="campagins.php" method="post">
 	Campain<br />
 	Name
@@ -28,6 +27,29 @@ $rows= domains::display();
 	<input type="text" name="Domain"/><br />
 	Cluster
 	<input type="text" name="Cluster"/><br />
-	<input type="submit" />
+	<input type="submit" name="submit_campagin" />
 	
 </form>
+
+<?php
+$camp = array("campagins"=> array());
+$factory = new Factory($camp);
+$cam = $factory->get_obj();
+$camps = $cam->display();
+
+echo '<table border="1">
+<tr><td>id</td><td>campagin name</td>
+<td>advertiser</td><td>network</td><td>domain</td><td>cluster</td><td>offer</td></tr>';
+if(!empty($camps)){
+	foreach($camps as $key => $value){
+		echo '<tr>';
+		foreach($value as $vv){
+			echo '<td>'.$vv.'</td>';
+		}
+		echo '</tr>';
+	}
+}
+echo '</table>';
+exit;
+
+?>

@@ -9,6 +9,8 @@ require_once('domains.php');
 /*require once ip.php*/
 require_once('ip.php');
 
+/*require_once for campagins*/
+require_once('campagins.php');
 
 
 
