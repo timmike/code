@@ -5,6 +5,7 @@ if(!empty($_GET['campagin_id'])){
 }
 ?>
 
+<h2>Creatives</h2>
 
 <form action="Creative.php" method="post">
 	<input type="hidden" name="campagin_id" value="<?php echo $campagin_id; ?>" />
@@ -19,12 +20,17 @@ $rows = creative::display_campagin_id($campagin_id);
 
 
 echo '<table border="1">
-<tr><td>id</td><td>campagin</td><td>name</tr>';
+<tr><td>id</td><td>campagin</td><td>name</td></tr>';
 if(!empty($rows)){
 	foreach($rows as $key => $value){
 		echo '<tr>';
 		foreach($value as $key => $vv){
-			echo '<td>'.$vv.'</td>';			
+			if($key == 'id'){
+				echo '<td><a href="displayLink.php?creative_id='.$vv.'">'.$vv.'</td></a>';
+			}
+			else{
+				echo '<td>'.$vv.'</td>';
+			}		
 		}
 		echo '</tr>';
 	}

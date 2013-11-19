@@ -13,6 +13,7 @@ $rows= domains::display();
 
 ?>
 
+<h2>Campagin</h2>
 <form action="campagins.php" method="post">
 	Campain<br />
 	Name
