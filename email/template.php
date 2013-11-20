@@ -91,6 +91,7 @@ if(!empty($_POST['submitTemplate'])){
 	$id = $template ->insert($template->get_template());
 	$template->set_id($id);
 	$template->upload();
+	header("location: displaytemplate.php");
 }
 else if(!empty($_GET['submit']) && $_GET['submit'] == 'ajax'){
 	$creative_id = $_GET['creative_id'];
@@ -98,18 +99,22 @@ else if(!empty($_GET['submit']) && $_GET['submit'] == 'ajax'){
 	$template = new templates($template);
 	$template->get_file_names_by_creative_id($creative_id);
 }
-else if($_GET['templ'] == 'templ'){
+else if(!empty($_GET['templ']) && $_GET['templ'] == 'templ'){
 	$name = $_GET['name'];
 	$creative_id = $_GET['creative_id'];
 	$template = array('creative_id'=>$creative_id, 'name'=>$name, 'template'=>null);
 	$template = new templates($template);
 	$template->load_file();
 }
+else if(!empty($_POST['send']))
+{
+	echo 'asdf';
+	print_r($_POST);
+	exit;
+}
 
 
 
-
-exit;
 
 
 ?>

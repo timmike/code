@@ -44,7 +44,7 @@ $( document ).ready(function() {
   	  	$('#template').empty();
   			$.each(data, function( index, value ) {
   				$('#template')
-         .append(value);
+         .html(value);
 				});
      	}
      	
@@ -79,5 +79,6 @@ $rows = creative::display();
 </select>
 <select name="templ" id="templ"><option>select a template</option></select>
 <input type="text" name="name" />
-<input type="submit" name="submitTemplate"/>
+<input type="submit" name="submitTemplate" value="Create New Template"/>
+<input type="submit" name="send" value="Send"/>
 </form>
