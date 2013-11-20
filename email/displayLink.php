@@ -19,7 +19,8 @@ if(!empty($_GET['creative_id'])){
 
 require_once('link.php');
 
-$rows = link::display_creative_id($creative_id);
+link::setTable('link');
+$rows = link::displayByField(array('creative_id'=>$creative_id));
 
 
 echo '<table border="1">

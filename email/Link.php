@@ -8,9 +8,9 @@ class link extends campagins
 	
 	private $creative_id;
 	
-	private $name;
+	private $file_name;
 	
-	private $address;
+	private $name;
 	
 	private $tmp_name;
 	
@@ -19,11 +19,17 @@ class link extends campagins
 	public function __construct($the_link)
 	{
 		$this->setTable('link');
-		$this->link = array('creative_id' => $the_link['creative_id'], 
-			'name'=>$the_link['name'], 'file_name'=>strtolower($the_link['file_name']));
+					
 		$this->tmp_name = $the_link['tmp_name'];
-		$this->id = $this->insert($this->link);
-		$this->upload();
+		
+		$this->creative_id = $the_link['creative_id'];
+		
+		$this->file_name = $the_link['file_name'];
+		
+		$this->name = $the_link['name'];
+		
+		$this->link = array('creative_id' => $this->creative_id, 
+			'name'=>$this->name, 'file_name'=>strtolower($this->file_name));		
 	}
 	
 	public function upload()
@@ -33,19 +39,14 @@ class link extends campagins
 		move_uploaded_file($this->tmp_name, $dir.'/'.strtolower($this->link['file_name']));
 	}
 	
-	public static function display_creative_id($creative_id)
+	public function get_link()
 	{
-	  $result = mysqli_query(parent::getInstance()->getConnection(), 
-		'select * from link
-		where creative_id = '.$creative_id.'
-		order by id desc');
-		
-		$res = array();
-		for($i=0; $i<$result->num_rows; $i++){
-			$rows = mysqli_fetch_array($result,MYSQL_ASSOC);
-			$res[] = $rows;
-		}
-		return $res;
+		return $this->link;
+	}
+	
+	public function set_id($the_id)
+	{
+		$this->id = $the_id;
 	}
 	
 }
@@ -54,6 +55,9 @@ if(!empty($_POST['submitlink'])){
 	$link = array('name'=>$_POST['name'], 'creative_id'=>$_POST['creative_id'], 
    'file_name'=>$_FILES['image']['name'], 'tmp_name'=>$_FILES['image']['tmp_name']);
 	$link = new link($link);
+	$id = $link->insert($link->get_link());
+	$link->set_id($id);
+	$link->upload();
 	header("location:displayLink.php?creative_id=".$_POST['creative_id']."");
 	exit;
 }

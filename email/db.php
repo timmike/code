@@ -57,8 +57,12 @@ class Database {
 	public static function display()
 	{
 		$result = mysqli_query(self::getInstance()->getConnection(), 'select * from '.self::$_table.'');
-		$rows = mysqli_fetch_array($result,MYSQL_ASSOC);
-		return $rows;
+		$res = array();
+		for($i=0; $i<$result->num_rows; $i++){
+			$rows = mysqli_fetch_array($result,MYSQL_ASSOC);
+			$res[] = $rows;
+		}
+		return $res;
 	}
 	
 	public static function insert($fields)
@@ -80,6 +84,25 @@ class Database {
 	
 		mysqli_query(self::getInstance()->getConnection(), $q);
 		return mysqli_insert_id(self::getInstance()->getConnection());
+	}
+	
+	public static function displayByField($field)
+	{
+		$key = array_keys($field);
+		$value = array_values($field);
+		
+		$q = 'select * from ' . self::$_table.'
+		where '.$key[0].' = '.$value[0].'
+		 order by id desc';
+		
+		$result = mysqli_query(self::getInstance()->getConnection(), $q);
+		
+		$res = array();
+		for($i=0; $i<$result->num_rows; $i++){
+			$rows = mysqli_fetch_array($result,MYSQL_ASSOC);
+			$res[] = $rows;
+		}
+		return $res;
 	}
 	
 }

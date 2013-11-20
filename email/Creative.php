@@ -15,30 +15,32 @@ class creative extends campagins
 	public function __construct($the_creative)
 	{
 		$this->setTable('creative');
-		$this->creative = array('campagin_id' => $the_creative['campagin_id'], 'name'=>$the_creative['name']);
-		$this->insert($this->creative);
+		
+		$this->campagin_id = $the_creative['campagin_id'];
+		
+		$this->name = $the_creative['name'];
+		
+		$this->creative = array('campagin_id' =>$this->campagin_id, 'name'=>$this->name);
 	}
 	
-	public static function display_campagin_id($campagin_id)
+	public function get_creative()
 	{
-	  $result = mysqli_query(parent::getInstance()->getConnection(), 
-		'select * from creative
-		where campagin_id = '.$campagin_id.'
-		order by id desc');
-		
-		$res = array();
-		for($i=0; $i<$result->num_rows; $i++){
-			$rows = mysqli_fetch_array($result,MYSQL_ASSOC);
-			$res[] = $rows;
-		}
-		return $res;
+		return $this->creative;
+	}
+	
+	public static function display()
+	{
+		parent::setTable('creative');
+		return Database::display();		
 	}
 }
 
 if(!empty($_POST['submitcreative'])){
 	$creative = array('name'=>$_POST['name'], 'campagin_id'=>$_POST['campagin_id']);
-	$cre = new creative($creative);
+	$creative = new creative($creative);
+	$creative->insert($creative->get_creative());
 	header("location:displayCreative.php?campagin_id=".$_POST['campagin_id']."");
+	exit;
 }
 
 ?>

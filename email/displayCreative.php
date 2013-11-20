@@ -16,8 +16,8 @@ if(!empty($_GET['campagin_id'])){
 <?php
 require_once('Creative.php');
 
-$rows = creative::display_campagin_id($campagin_id);
-
+creative::setTable('creative');
+$rows = creative::displayByField(array('campagin_id'=>$campagin_id));
 
 echo '<table border="1">
 <tr><td>id</td><td>campagin</td><td>name</td></tr>';
