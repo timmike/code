@@ -15,7 +15,7 @@ $( document ).ready(function() {
       	$.each(json, function( index, value ) {
       		if(index == 0){
       			 $('#template').empty();
-      			 $('#template').append(value);
+      			 $('#template').html(value);
       		}
       		else {
   					$('#templ')
@@ -73,7 +73,7 @@ $rows = creative::display();
 	</option>
 	<?php
 	foreach($rows as $key => $value){
-		echo '<option value="'.$value['id'].'">'.$value['name'].'</option>';
+		echo '<option value="'.$value['id'].'">'.$value['id'].'</option>';
 	}
 	?>
 </select>
