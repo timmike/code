@@ -2,6 +2,8 @@
 /*singleton design pattern*/
 require_once('db.php');
 
+require_once('init.php');
+
 class templates extends Database
 {
 	
@@ -25,7 +27,7 @@ class templates extends Database
 		
 		$this->des = $template['template'];
 		
-		$this->template = array('creative_id' => $this->creative_id, 'name'=>$this->name);
+		$this->template = array('creative_id' => $this->creative_id, 'name'=>$this->name, 'template'=>$this->des);
 	}
 		
 	public function get_template()
@@ -99,6 +101,27 @@ class templates extends Database
 		}
 	}
 	
+	public function send_emails($total)
+	{
+		
+		
+		$factory = new Factory(array('fromdomains'=>array()));
+		$fromdomains = $factory->get_obj();
+		
+		$is_selected = array('is_selected'=>'"1"');
+		
+		$fromdos = $fromdomains::displayByField($is_selected);
+
+		$arrayobject = new ArrayObject($fromdos);
+		$iterator = $arrayobject->getIterator();
+		
+
+		//for($i=0; $i<$total; $i++){
+			echo preg_replace('/\[fromdomain\]/', 'test', $this->template['template']);	
+	//	}
+		
+	}
+	
 }
 
 if(!empty($_POST['submitTemplate'])){
@@ -125,9 +148,12 @@ else if(!empty($_GET['templ']) && $_GET['templ'] == 'templ'){
 }
 else if(!empty($_POST['send']))
 {
-	echo 'asdf';
-	print_r($_POST);
-	exit;
+	$creative_id = $_POST['templ'];
+	$template_name = $_POST['template_name'];
+	$template = $_POST['template'];
+	$template = array('creative_id'=>$creative_id, 'name'=>$template_name, 'template'=>$template);
+	$template = new templates($template);
+	$template->send_emails(5);
 }
 else if(!empty($_POST['updateTemplate']))
 {

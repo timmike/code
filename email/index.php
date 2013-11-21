@@ -36,10 +36,6 @@ $factory = new Factory(array('fromdomains'=>array()));
 $fromdomains = $factory->get_obj();
 $fromdos = $fromdomains::display();
 
-echo '<pre>';
-print_r($fromdos);
-echo '</pre>';
-
 echo '<table border="1">
 <tr><td>id</td><td>campagin name</td>
 <td>advertiser</td><td>network</td><td>domain</td><td>cluster</td><td>offer</td></tr>';
@@ -77,6 +73,29 @@ if(!empty($fromdos)){
 </form>
 
 <br />
+<?php
+$factory = new Factory(array('redirdomains'=>array()));
+$redirdomains = $factory->get_obj();
+$redirdos = $redirdomains::display();
+?>
+<h2>FromDomain</h2>
 
+<form action="redirdomains.php" method="POST">
+<?php
+if(!empty($redirdos)){
+	foreach($redirdos as $value){
+		echo '<input name="redirdomains['.$value["id"].']" type="checkbox" ';
+		if($value['is_selected'] == '1'){
+			echo ' checked= checked ';
+		}		
+		echo '/>'.$value['name'].'<br />';
+	}
+}
+?>
+<br />
+<input type="submit" value="submit" name="submit_redir_domains"/>
+</form>
+
+<br />
 
 

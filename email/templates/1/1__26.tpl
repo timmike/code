@@ -1,4 +1,4 @@
-1234-a new.   fffsdfg
+
 From: Credit-Scores<creditscores@[fromdomain]>
 Subject: [seednum] Your up-to-date credit scores are available online. Inquire inside
 MIME-Version: 1.0

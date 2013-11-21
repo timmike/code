@@ -2,7 +2,7 @@
 
 require_once('init.php');
 
-class redirdomains extends Database
+class todomains extends Database
 {	
 	private $id;
 	
@@ -12,7 +12,7 @@ class redirdomains extends Database
 		
 	public function __construct()
 	{
-		$this->setTable("redirdomains");
+		$this->setTable("fromdomains");
 	}
 		
 	public function compute_diff($select_domains)
@@ -54,20 +54,7 @@ class redirdomains extends Database
 	}
 }
 
-if(!empty($_POST['submit_redir_domains'])){
-	
-	$redirdomains = array('redirdomains' => array());
-	
-	$factory = new Factory($redirdomains);	
-	
-	$redirdomains = $factory->get_obj();
-	
-	$redirdomains->compute_diff($_POST['redirdomains']);
-	
-	header("location:index.php");
-	exit;
-	
-}
+
 
 	
 ?>
