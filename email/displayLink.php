@@ -17,6 +17,8 @@ if(!empty($_GET['creative_id'])){
 
 <?php
 
+require_once('init.php');
+
 require_once('link.php');
 
 link::setTable('link');

@@ -4,13 +4,7 @@
 require_once('db.php');
 
 /*require once domains.php*/
-require_once('domains.php');
-
-/*require once ip.php*/
-require_once('ip.php');
-
-/*require_once for campagins*/
-require_once('campagins.php');
+require_once('factory.php');
 
 
 

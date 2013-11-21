@@ -1,14 +1,8 @@
 <?php
 
 ini_set('display_errors', 1);
+
 require_once('init.php');
-
-
-$domains = array("domains"=> array());
-$factory = new Factory($domains);
-
-Database::setTable("domains");
-$rows= domains::display();
 
 
 ?>
@@ -36,7 +30,15 @@ $rows= domains::display();
 $camp = array("campagins"=> array());
 $factory = new Factory($camp);
 $cam = $factory->get_obj();
-$camps = $cam->display();
+$camps = $cam::display();
+
+$factory = new Factory(array('fromdomains'=>array()));
+$fromdomains = $factory->get_obj();
+$fromdos = $fromdomains::display();
+
+echo '<pre>';
+print_r($fromdos);
+echo '</pre>';
 
 echo '<table border="1">
 <tr><td>id</td><td>campagin name</td>
@@ -56,6 +58,25 @@ if(!empty($camps)){
 	}
 }
 echo '</table>';
-exit;
-
 ?>
+<h2>FromDomain</h2>
+<form action="fromdomains.php" method="POST">
+<?php
+if(!empty($fromdos)){
+	foreach($fromdos as $value){
+		echo '<input name="fromdomains['.$value["id"].']" type="checkbox" ';
+		if($value['is_selected'] == '1'){
+			echo ' checked= checked ';
+		}		
+		echo '/>'.$value['name'].'<br />';
+	}
+}
+?>
+<br />
+<input type="submit" value="submit" name="submit_from_domains"/>
+</form>
+
+<br />
+
+
+

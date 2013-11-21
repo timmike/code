@@ -1,13 +1,7 @@
 <?php
 
 ini_set('display_errors', 1);
-
-/*require once for factory design pattern*/
-require_once('factory.php');
-
-require_once('db.php');
-
-
+require_once('init.php');
 
 class campagins extends Database
 {

@@ -6,6 +6,7 @@
  * The essence of this pattern is to "Define an interface for creating an object
  */
  
+require_once('db.php');
 class Factory
 {
 	/**
@@ -18,6 +19,7 @@ class Factory
  * To create an instance of a class, the new keyword must be used
  */
 	private $obj;
+
 	
 	public function __construct($the_data)
 	{
@@ -29,6 +31,8 @@ class Factory
 		if(!empty($the_data)){
 			$this->data = $the_data;
 			$function = key($this->data);
+			
+			require_once($function.'.php');
 			/**
  			 * To create an instance of a class, the new keyword must be used
  			 */
@@ -45,7 +49,7 @@ class Factory
 			}
 		}
 	}
-	
+		
 	public function get_obj()
 	{
 		return $this->obj;

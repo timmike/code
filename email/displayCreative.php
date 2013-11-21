@@ -14,6 +14,9 @@ if(!empty($_GET['campagin_id'])){
 </form>
 
 <?php
+
+require_once('init.php');
+
 require_once('Creative.php');
 
 creative::setTable('creative');

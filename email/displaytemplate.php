@@ -12,7 +12,11 @@ $( document ).ready(function() {
   	  success: function(data) {
       	var json = $.parseJSON(data);
       	$("#templ").empty();
+      	 $('#template').empty();
       	$.each(json, function( index, value ) {
+          if(index == 2)	{
+          	$("#template_name").attr('value', value);
+          }
       		if(index == 0){
       			 $('#template').empty();
       			 $('#template').html(value);
@@ -45,9 +49,9 @@ $( document ).ready(function() {
   			$.each(data, function( index, value ) {
   				$('#template')
          .html(value);
+         $("#template_name").attr('value', name);
 				});
-     	}
-     	
+     	}     	
 		});
 	});
 
@@ -78,7 +82,9 @@ $rows = creative::display();
 	?>
 </select>
 <select name="templ" id="templ"><option>select a template</option></select>
+<input type="hidden" name="template_name" id="template_name" value="" />
 <input type="text" name="name" />
 <input type="submit" name="submitTemplate" value="Create New Template"/>
+<input type="submit" name="updateTemplate" value="Update"/>
 <input type="submit" name="send" value="Send"/>
 </form>

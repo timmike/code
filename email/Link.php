@@ -1,5 +1,7 @@
 <?php
 
+require_once('init.php');
+
 require_once('campagins.php');
 
 class link extends campagins

@@ -105,7 +105,7 @@ CREATE TABLE `campagin` (
   `cluster_id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -114,8 +114,37 @@ CREATE TABLE `campagin` (
 
 LOCK TABLES `campagin` WRITE;
 /*!40000 ALTER TABLE `campagin` DISABLE KEYS */;
-INSERT INTO `campagin` VALUES (1,2,2,3,3,2,'3'),(2,2,2,3,3,2,'3'),(3,2,2,3,3,2,'3'),(4,2,2,3,3,2,'3'),(5,2,2,3,4,2,'3'),(6,3,2,3,4,2,'111'),(7,3,2,4,4,2,'111'),(8,3,2,4,4,2,'111'),(9,7,6,9,8,6,'eee'),(10,9,8,11,10,10,'1111'),(11,9,8,11,10,9,'1111'),(12,3,9,4,11,11,'111'),(13,2,2,3,10,2,'111'),(14,9,8,11,10,9,'111'),(15,2,2,3,2,2,'1'),(16,2,2,3,2,2,'1'),(17,9,8,11,10,9,'111'),(18,2,8,3,10,9,'111'),(19,9,8,4,4,2,'111'),(20,5,4,6,13,4,'aaa'),(21,13,14,15,16,17,'2442'),(22,15,17,8,18,18,'2442'),(23,7,16,12,19,20,'2123'),(24,12,22,13,17,6,'ee'),(25,12,22,13,17,6,'ee'),(26,20,23,19,22,22,'tt'),(27,21,24,20,23,23,'yy'),(28,22,25,21,24,24,'i lvoe'),(29,12,26,13,25,14,'sdf'),(30,23,27,22,26,25,'tian'),(31,7,28,13,8,7,'123');
+INSERT INTO `campagin` VALUES (1,2,2,3,3,2,'3'),(2,2,2,3,3,2,'3'),(3,2,2,3,3,2,'3'),(4,2,2,3,3,2,'3'),(5,2,2,3,4,2,'3'),(6,3,2,3,4,2,'111'),(7,3,2,4,4,2,'111'),(8,3,2,4,4,2,'111'),(9,7,6,9,8,6,'eee'),(10,9,8,11,10,10,'1111'),(11,9,8,11,10,9,'1111'),(12,3,9,4,11,11,'111'),(13,2,2,3,10,2,'111'),(14,9,8,11,10,9,'111'),(15,2,2,3,2,2,'1'),(16,2,2,3,2,2,'1'),(17,9,8,11,10,9,'111'),(18,2,8,3,10,9,'111'),(19,9,8,4,4,2,'111'),(20,5,4,6,13,4,'aaa'),(21,13,14,15,16,17,'2442'),(22,15,17,8,18,18,'2442'),(23,7,16,12,19,20,'2123'),(24,12,22,13,17,6,'ee'),(25,12,22,13,17,6,'ee'),(26,20,23,19,22,22,'tt'),(27,21,24,20,23,23,'yy'),(28,22,25,21,24,24,'i lvoe'),(29,12,26,13,25,14,'sdf'),(30,23,27,22,26,25,'tian'),(31,7,28,13,8,7,'123'),(32,7,16,8,17,14,'adsf'),(33,12,22,23,12,20,'ee'),(34,14,16,8,12,20,'awer');
 /*!40000 ALTER TABLE `campagin` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ipdomains`
+--
+
+DROP TABLE IF EXISTS `ipdomains`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ipdomains` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `server` varchar(20) NOT NULL,
+  `nb` varchar(20) NOT NULL,
+  `ip` varchar(20) NOT NULL,
+  `dns` varchar(30) NOT NULL,
+  `vmta` varchar(20) NOT NULL,
+  `is_selected` enum('0','1') DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ipdomains`
+--
+
+LOCK TABLES `ipdomains` WRITE;
+/*!40000 ALTER TABLE `ipdomains` DISABLE KEYS */;
+INSERT INTO `ipdomains` VALUES (1,'1','1','198.154.212.226','ice1.mydealstoday.info','postfix',NULL),(2,'1','1','198.154.212.227','ice2.mydealstoday.info','postfix-227',NULL),(3,'1','1','198.154.212.228','ice3.mydealstoday.info','postfix-228',NULL),(4,'1','1','198.154.212.229','ice4.mydealstoday.info','postfix-229',NULL);
+/*!40000 ALTER TABLE `ipdomains` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -129,7 +158,7 @@ CREATE TABLE `offer` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `offer` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -138,7 +167,7 @@ CREATE TABLE `offer` (
 
 LOCK TABLES `offer` WRITE;
 /*!40000 ALTER TABLE `offer` DISABLE KEYS */;
-INSERT INTO `offer` VALUES (1,'d'),(2,'f'),(3,'4'),(4,'444'),(5,'eda'),(6,'ddd'),(7,'dd'),(8,'asdf'),(9,'eee'),(10,'44'),(11,'4444'),(12,'adf'),(13,'ee'),(14,'eeee'),(15,'ssasdf'),(16,'aaa'),(17,'adfdfadf'),(18,'ff'),(19,'tt'),(20,'yy'),(21,'easdf'),(22,'ll');
+INSERT INTO `offer` VALUES (1,'d'),(2,'f'),(3,'4'),(4,'444'),(5,'eda'),(6,'ddd'),(7,'dd'),(8,'asdf'),(9,'eee'),(10,'44'),(11,'4444'),(12,'adf'),(13,'ee'),(14,'eeee'),(15,'ssasdf'),(16,'aaa'),(17,'adfdfadf'),(18,'ff'),(19,'tt'),(20,'yy'),(21,'easdf'),(22,'ll'),(23,'fasdf');
 /*!40000 ALTER TABLE `offer` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -154,7 +183,7 @@ CREATE TABLE `creative` (
   `campagin_id` int(11) DEFAULT NULL,
   `name` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -163,7 +192,7 @@ CREATE TABLE `creative` (
 
 LOCK TABLES `creative` WRITE;
 /*!40000 ALTER TABLE `creative` DISABLE KEYS */;
-INSERT INTO `creative` VALUES (1,28,'fg'),(2,28,'eefa'),(3,26,'adf'),(4,29,'rrr'),(5,31,'dfas'),(6,31,'est');
+INSERT INTO `creative` VALUES (1,28,'fg'),(2,28,'eefa'),(3,26,'adf'),(4,29,'rrr'),(5,31,'dfas'),(6,31,'est'),(7,31,'daf'),(8,31,'ddaweee'),(9,31,'ddaweee'),(10,31,'ff'),(11,31,'ee'),(12,31,'ddd'),(13,31,'ee'),(14,32,'ee'),(15,32,'ee'),(16,28,'ee'),(17,32,'ee'),(18,32,'ee');
 /*!40000 ALTER TABLE `creative` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -192,6 +221,58 @@ INSERT INTO `cluster` VALUES (1,'f'),(2,'6'),(3,'21'),(4,'fff'),(5,'adf'),(6,'ee
 UNLOCK TABLES;
 
 --
+-- Table structure for table `fromdomains`
+--
+
+DROP TABLE IF EXISTS `fromdomains`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `fromdomains` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `is_selected` enum('0','1') DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `fromdomains`
+--
+
+LOCK TABLES `fromdomains` WRITE;
+/*!40000 ALTER TABLE `fromdomains` DISABLE KEYS */;
+INSERT INTO `fromdomains` VALUES (1,'mydealstoday.info','2013-02-24 22:36:33','1'),(2,'yahoo.com','2013-02-24 22:36:33','1'),(3,'chichionline.net','2013-02-24 22:37:03','1'),(4,'dog.com','2013-02-24 22:37:03','1'),(5,'cat.com','2013-02-24 22:37:11','0'),(6,'monkey.net','2013-02-24 22:37:11','1');
+/*!40000 ALTER TABLE `fromdomains` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `template`
+--
+
+DROP TABLE IF EXISTS `template`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `template` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `creative_id` int(11) DEFAULT NULL,
+  `name` varchar(45) DEFAULT NULL,
+  `note` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `template`
+--
+
+LOCK TABLES `template` WRITE;
+/*!40000 ALTER TABLE `template` DISABLE KEYS */;
+INSERT INTO `template` VALUES (1,3,'asdf',NULL),(2,3,'fff',NULL),(3,2,'eee',NULL),(4,2,'eee',NULL),(5,4,'asdfasdf',NULL),(6,4,'asdfasdf',NULL),(7,4,'asdfasdf',NULL),(8,4,'asdfasdf',NULL),(9,4,'asdfasdf',NULL),(10,12,'asdfasdf',NULL),(11,12,'asdfasdf',NULL),(12,2,'asdfasdf',NULL),(13,2,'asdfasdf',NULL),(14,1,'asdfasdf',NULL),(15,1,'asdfasdf',NULL),(16,1,'asdfasdf',NULL),(17,1,'asdfasdf',NULL),(18,14,'asdfasdf',NULL),(19,7,'eeradf',NULL),(20,6,'adf',NULL),(21,14,'ffff',NULL),(22,14,'dddaee',NULL),(23,14,'',NULL),(24,14,'ttt',NULL),(25,1,'uiio',NULL),(26,1,'',NULL),(27,1,'',NULL),(28,2,'dd',NULL);
+/*!40000 ALTER TABLE `template` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `link`
 --
 
@@ -204,7 +285,7 @@ CREATE TABLE `link` (
   `name` varchar(256) DEFAULT NULL,
   `file_name` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -213,32 +294,34 @@ CREATE TABLE `link` (
 
 LOCK TABLES `link` WRITE;
 /*!40000 ALTER TABLE `link` DISABLE KEYS */;
-INSERT INTO `link` VALUES (1,1,'asdf','adf'),(2,1,'asdf','c:\\windows\\temp\\php67f.tmp'),(3,1,'asdf','c:\\windows\\temp\\php682.tmp'),(4,1,'asdf','c:\\windows\\temp\\php68a.tmp'),(5,2,'ee','c:\\windows\\temp\\php68e.tmp'),(6,2,'ee',''),(7,2,'ee','c:\\windows\\temp\\php6a1.tmp'),(8,2,'adf','c:\\windows\\temp\\php6ab.tmp'),(9,2,'adf','c:\\windows\\temp\\php6c3.tmp'),(10,2,'fff','c:windows	empphp6cd.tmp'),(11,2,'adf','c:windows	empphp6d5.tmp'),(12,2,'adf','c:windows	empphp6d6.tmp'),(13,2,'adf','c:windows	empphp6da.tmp'),(14,2,'adf','c:windows	empphp6dc.tmp'),(15,2,'adf','c:windows	empphp6e0.tmp'),(16,2,'adf','c:windows	empphp6e3.tmp'),(17,2,'adf','c:windows	empphp6e7.tmp'),(18,2,'adf','c:windows	empphp6eb.tmp'),(19,2,'adf','c:windows	empphp6ec.tmp'),(20,2,'adf','c:windows	empphp6f4.tmp'),(21,2,'adf','c:windows	empphp6fe.tmp'),(22,2,'adf','c:windows	empphp707.tmp'),(23,2,'adf','c:windows	empphp708.tmp'),(24,2,'adf','c:windows	empphp710.tmp'),(25,2,'adf','pix.jpg'),(26,2,'adf','pix.jpg'),(27,2,'adf','pix.jpg'),(28,2,'adf','pix.jpg'),(29,2,'adf','pix.jpg'),(30,2,'ddeerr','pix.jpg'),(31,4,'eeee','pix.jpg'),(32,4,'eardf','pix.jpg'),(33,4,'adfasdf','pix2.jpg'),(34,4,'adfadf','laura.jpg'),(35,6,'sadfasf','multi-site.jpg');
+INSERT INTO `link` VALUES (1,1,'asdf','adf'),(2,1,'asdf','c:\\windows\\temp\\php67f.tmp'),(3,1,'asdf','c:\\windows\\temp\\php682.tmp'),(4,1,'asdf','c:\\windows\\temp\\php68a.tmp'),(5,2,'ee','c:\\windows\\temp\\php68e.tmp'),(6,2,'ee',''),(7,2,'ee','c:\\windows\\temp\\php6a1.tmp'),(8,2,'adf','c:\\windows\\temp\\php6ab.tmp'),(9,2,'adf','c:\\windows\\temp\\php6c3.tmp'),(10,2,'fff','c:windows	empphp6cd.tmp'),(11,2,'adf','c:windows	empphp6d5.tmp'),(12,2,'adf','c:windows	empphp6d6.tmp'),(13,2,'adf','c:windows	empphp6da.tmp'),(14,2,'adf','c:windows	empphp6dc.tmp'),(15,2,'adf','c:windows	empphp6e0.tmp'),(16,2,'adf','c:windows	empphp6e3.tmp'),(17,2,'adf','c:windows	empphp6e7.tmp'),(18,2,'adf','c:windows	empphp6eb.tmp'),(19,2,'adf','c:windows	empphp6ec.tmp'),(20,2,'adf','c:windows	empphp6f4.tmp'),(21,2,'adf','c:windows	empphp6fe.tmp'),(22,2,'adf','c:windows	empphp707.tmp'),(23,2,'adf','c:windows	empphp708.tmp'),(24,2,'adf','c:windows	empphp710.tmp'),(25,2,'adf','pix.jpg'),(26,2,'adf','pix.jpg'),(27,2,'adf','pix.jpg'),(28,2,'adf','pix.jpg'),(29,2,'adf','pix.jpg'),(30,2,'ddeerr','pix.jpg'),(31,4,'eeee','pix.jpg'),(32,4,'eardf','pix.jpg'),(33,4,'adfasdf','pix2.jpg'),(34,4,'adfadf','laura.jpg'),(35,6,'sadfasf','multi-site.jpg'),(36,7,'asdfasdf','laura.jpg'),(37,13,'asdfasdf','laura.jpg'),(38,13,'adsfasdf','multi-site.jpg'),(39,15,'fff','img_0441.jpg'),(40,15,'rr','laura.jpg'),(41,18,'eee','multi-site.jpg');
 /*!40000 ALTER TABLE `link` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `domains`
+-- Table structure for table `redirdomains`
 --
 
-DROP TABLE IF EXISTS `domains`;
+DROP TABLE IF EXISTS `redirdomains`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `domains` (
-  `id` int(11) NOT NULL,
-  `domain` varchar(50) NOT NULL,
+CREATE TABLE `redirdomains` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) NOT NULL,
+  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `is_selected` enum('0','1') DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `domains`
+-- Dumping data for table `redirdomains`
 --
 
-LOCK TABLES `domains` WRITE;
-/*!40000 ALTER TABLE `domains` DISABLE KEYS */;
-INSERT INTO `domains` VALUES (1,'http://www.google.com');
-/*!40000 ALTER TABLE `domains` ENABLE KEYS */;
+LOCK TABLES `redirdomains` WRITE;
+/*!40000 ALTER TABLE `redirdomains` DISABLE KEYS */;
+INSERT INTO `redirdomains` VALUES (1,'yahoo.com','2013-02-24 22:31:32',NULL),(2,'mydealstoday.info','2013-02-24 22:32:35',NULL),(3,'facebook.com','2013-02-24 22:33:18',NULL),(4,'juice.com','2013-02-24 22:33:18',NULL),(5,'apple.com','2013-02-24 22:34:11',NULL),(6,'sleep.net','2013-02-24 22:34:11',NULL);
+/*!40000 ALTER TABLE `redirdomains` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -250,4 +333,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-11-19 13:54:00
+-- Dump completed on 2013-11-20 17:28:31

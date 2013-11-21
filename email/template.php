@@ -71,6 +71,23 @@ class templates extends Database
 		}
 	}
 	
+	public function update_template()
+	{
+		$dir  = 'templates/'.$this->creative_id.'/'.$this->name;
+		if(file_exists($dir)){
+			
+			$handle = fopen($dir, 'w') 
+			or die('Cannot open file:  ');		
+			fwrite($handle, $this->des); 		
+			fclose($handle);
+				
+		}
+		else{
+			echo 'File does not exists. Please tell Tian or Mike';
+			exit;
+		}		
+	}
+	
 	public function load_file()
 	{
 		$file = 'templates/'.$this->creative_id.'/'.$this->name;
@@ -111,6 +128,27 @@ else if(!empty($_POST['send']))
 	echo 'asdf';
 	print_r($_POST);
 	exit;
+}
+else if(!empty($_POST['updateTemplate']))
+{
+
+	if(empty($_POST['templ'])){
+		echo 'creative id is not given. Cant update';
+	}
+	if(empty($_POST['template_name'])){
+		echo 'template name is not given. Cant update';
+	}
+	
+	$creative_id = $_POST['templ'];
+	$template_name = $_POST['template_name'];
+	$template = $_POST['template'];
+		
+	$template = array('creative_id'=>$creative_id, 'name'=>$template_name, 'template'=>$template);
+	$template = new templates($template);
+	$template->update_template();
+	header("location: displaytemplate.php");
+	exit;
+	
 }
 
 

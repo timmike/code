@@ -8,7 +8,7 @@ class Database {
   // Store the single instance.
   private static $_instance;
 	
-	private static $_table;
+	protected static $_table;
 
   /**
    * Get an instance of the Database.
@@ -65,6 +65,7 @@ class Database {
 		return $res;
 	}
 	
+	
 	public static function insert($fields)
 	{
 		$q = ' insert into '.strtolower(self::$_table).'(';
@@ -81,7 +82,7 @@ class Database {
 		}
 		$q = rtrim($q, ",");
 		$q .= ')';
-	
+			
 		mysqli_query(self::getInstance()->getConnection(), $q);
 		return mysqli_insert_id(self::getInstance()->getConnection());
 	}
