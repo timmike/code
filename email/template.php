@@ -28,6 +28,7 @@ class templates extends Database
 		$this->des = $template['template'];
 		
 		$this->template = array('creative_id' => $this->creative_id, 'name'=>$this->name, 'template'=>$this->des);
+		
 	}
 		
 	public function get_template()
@@ -102,24 +103,110 @@ class templates extends Database
 	}
 	
 	public function send_emails($total)
-	{
+	{		
+		$factory = new Factory(array('redirdomains'=>array()));
+		$obj = $factory->get_obj();
 		
+		$factory_2 = new Factory(array('fromdomains'=>array()));
+		$obj_2 = $factory_2->get_obj();
 		
-		$factory = new Factory(array('fromdomains'=>array()));
-		$fromdomains = $factory->get_obj();
-		
-		$is_selected = array('is_selected'=>'"1"');
-		
-		$fromdos = $fromdomains::displayByField($is_selected);
-
-		$arrayobject = new ArrayObject($fromdos);
+		$domains = $obj::displayByField(array('is_selected'=>'"1"'));
+		$arrayobject = new ArrayObject($domains);
 		$iterator = $arrayobject->getIterator();
+		$count_domain = $iterator->count();
+		$counter_domain =1;
 		
+		$domains_2 = $obj_2::displayByField(array('is_selected'=>'"1"'));
+		$arrayobject_2 = new ArrayObject($domains_2);
+		$iterator_2 = $arrayobject_2->getIterator();
+		$count_domain_2 = $iterator_2->count();
+		$counter_domain_2 =1;
+				
+		for($i=0; $i<$total; $i++)	{
+			
+			$this->template['template']= $this->des;
+			
+			$domain = $iterator->current();
+			$domain = $domain['name'];
+			
+			$domain_2 = $iterator_2->current();
+			$domain_2 = $domain_2['name'];
+		
+			$this->template['template'] = preg_replace('/\[redirdomain\]/', $domain, $this->template['template']);	
+			$this->template['template'] = preg_replace('/\[fromdomain\]/', $domain_2, $this->template['template']);			
+			$this->template['template'] = preg_replace('/\[seednum\]/', $i, $this->template['template']);		
+			
+			$matches = array();
+			preg_match('/token\=[0-9]+/', $this->template['template'], $matches);
+			preg_match('/[0-9]+/', $matches[0], $matches);
+			
+			
+			
+			echo '<pre>';
+			print_r($matches);
+			echo '</pre>';	
+			
+			echo '<textarea rows="18" cols="64">';
+			echo 	$this->template['template'];
+			echo '</textarea>';
+			
+			$iterator->next();
 
-		//for($i=0; $i<$total; $i++){
-			echo preg_replace('/\[fromdomain\]/', 'test', $this->template['template']);	
-	//	}
+			if($counter_domain == $count_domain){
+				$iterator->rewind();
+				$counter_domain=1;
+			}
+			
+			$counter_domain++;
+			
+			$iterator_2->next();
+			
+			if($counter_domain_2 == $count_domain_2){
+				$iterator_2->rewind();
+				$counter_domain_2=1;
+			}
+			
+			$counter_domain_2++;
+			
+		}
 		
+		
+		
+	}
+	
+	
+	private function replacing($obj, $total, $var)
+	{
+		$factory = new Factory($obj);
+		$obj = $factory->get_obj();
+		
+		$domains = $obj::displayByField(array('is_selected'=>'"1"'));
+		$arrayobject = new ArrayObject($domains);
+		$iterator = $arrayobject->getIterator();
+		$count_domain = $iterator->count();
+		$counter_domain =1;
+				
+		for($i=0; $i<$total; $i++)	{
+			
+			$domain = $iterator->current();
+			$domain = $domain['name'];
+		
+			
+			echo '<textarea rows="18" cols="64">';
+			echo preg_replace('/\['.$var.'\]/', $domain, $this->template['template']);	
+			echo '</textarea>';
+			
+			$iterator->next();
+
+			if($counter_domain == $count_domain){
+				$iterator->rewind();
+				$counter_domain=1;
+			}
+			
+			$counter_domain++;
+			
+		}
+					
 	}
 	
 }
@@ -153,7 +240,7 @@ else if(!empty($_POST['send']))
 	$template = $_POST['template'];
 	$template = array('creative_id'=>$creative_id, 'name'=>$template_name, 'template'=>$template);
 	$template = new templates($template);
-	$template->send_emails(5);
+	$template->send_emails(15);
 }
 else if(!empty($_POST['updateTemplate']))
 {
