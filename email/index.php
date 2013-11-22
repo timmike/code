@@ -78,7 +78,7 @@ $factory = new Factory(array('redirdomains'=>array()));
 $redirdomains = $factory->get_obj();
 $redirdos = $redirdomains::display();
 ?>
-<h2>FromDomain</h2>
+<h2>ToDomains</h2>
 
 <form action="redirdomains.php" method="POST">
 <?php
