@@ -140,11 +140,10 @@ class templates extends Database
 			preg_match('/token\=[0-9]+/', $this->template['template'], $matches);
 			preg_match('/[0-9]+/', $matches[0], $matches);
 			
-			
-			
-			echo '<pre>';
-			print_r($matches);
-			echo '</pre>';	
+			$factory_3 = new Factory(array('link'=>array()));
+			$link_obj = $factory_3->get_obj();
+			$link = $link_obj::displayByField(array('id'=>$matches[0]));
+			$this->template['template'] = preg_replace('/\[rand[0-9]*\]/', $link[0]['name'], $this->template['template']);
 			
 			echo '<textarea rows="18" cols="64">';
 			echo 	$this->template['template'];

@@ -21,14 +21,18 @@ class link extends campagins
 	public function __construct($the_link)
 	{
 		$this->setTable('link');
-					
-		$this->tmp_name = $the_link['tmp_name'];
 		
-		$this->creative_id = $the_link['creative_id'];
+		if(!empty($the_link['tmp_name']))			
+			$this->tmp_name = $the_link['tmp_name'];
 		
-		$this->file_name = $the_link['file_name'];
+		if(!empty($the_link['creative_id']))
+			$this->creative_id = $the_link['creative_id'];	
 		
-		$this->name = $the_link['name'];
+		if(!empty($the_link['file_name']))
+			$this->file_name = $the_link['file_name'];
+		
+		if(!empty($the_link['file_name']))
+			$this->name = $the_link['name'];
 		
 		$this->link = array('creative_id' => $this->creative_id, 
 			'name'=>$this->name, 'file_name'=>strtolower($this->file_name));		

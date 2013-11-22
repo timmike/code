@@ -13,6 +13,6 @@ Content-Transfer-Encoding: 8bit
 	
 <p style="font-size: 10pt; font-family: Verdana, Arial, Helvitica,
       Tahoma, sans-serif;text-align:center">
-<a href="http://www.[redirdomain]/i-[rand6]?token=278757-2802-94322-[uid]">
-        <img src="http://www.[redirdomain]/i-[rand1]?token=278757-92840577-94322-[uid]" alt="Your up-to-date credit scores are available online. Inquire inside" /></a>
+<a href="http://www.[redirdomain]/i-[rand6]?token=2-2802-94322-[uid]">
+        <img src="http://www.[redirdomain]/i-[rand1]?token=2-92840577-94322-[uid]" alt="Your up-to-date credit scores are available online. Inquire inside" /></a>
 </p>
