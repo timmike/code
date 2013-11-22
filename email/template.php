@@ -107,20 +107,20 @@ class templates extends Database
 		$factory = new Factory(array('redirdomains'=>array()));
 		$obj = $factory->get_obj();
 		
-		$factory_2 = new Factory(array('fromdomains'=>array()));
-		$obj_2 = $factory_2->get_obj();
-		
 		$domains = $obj::displayByField(array('is_selected'=>'"1"'));
 		$arrayobject = new ArrayObject($domains);
 		$iterator = $arrayobject->getIterator();
 		$count_domain = $iterator->count();
-		$counter_domain =1;
+		$counter_domain =0;
 		
-		$domains_2 = $obj_2::displayByField(array('is_selected'=>'"1"'));
+		$factory_2 = new Factory(array('fromdomains'=>array()));
+		$obj_2 = $factory_2->get_obj();
+				
+		$domains_2 = $obj_2::displayByField(array('is_selected'=>'"1"'));		
 		$arrayobject_2 = new ArrayObject($domains_2);
 		$iterator_2 = $arrayobject_2->getIterator();
 		$count_domain_2 = $iterator_2->count();
-		$counter_domain_2 =1;
+		$counter_domain_2 =0;
 				
 		for($i=0; $i<$total; $i++)	{
 			
@@ -131,7 +131,7 @@ class templates extends Database
 			
 			$domain_2 = $iterator_2->current();
 			$domain_2 = $domain_2['name'];
-		
+			
 			$this->template['template'] = preg_replace('/\[redirdomain\]/', $domain, $this->template['template']);	
 			$this->template['template'] = preg_replace('/\[fromdomain\]/', $domain_2, $this->template['template']);			
 			$this->template['template'] = preg_replace('/\[seednum\]/', $i, $this->template['template']);		
@@ -149,28 +149,26 @@ class templates extends Database
 			echo 	$this->template['template'];
 			echo '</textarea>';
 			
+		
+			$counter_domain++;
+			
 			$iterator->next();
-
+			
 			if($counter_domain == $count_domain){
 				$iterator->rewind();
-				$counter_domain=1;
+				$counter_domain=0;
 			}
-			
-			$counter_domain++;
+					
+			$counter_domain_2++;
 			
 			$iterator_2->next();
 			
 			if($counter_domain_2 == $count_domain_2){
 				$iterator_2->rewind();
-				$counter_domain_2=1;
+				$counter_domain_2=0;
 			}
-			
-			$counter_domain_2++;
-			
 		}
-		
-		
-		
+				
 	}
 	
 	

@@ -21,7 +21,8 @@ class redirdomains extends Database
 		$total = count($domains);
 		
 		$froms = $select_domains;
-		for($i=1; $i<=$total; $i++){
+		
+		for($i=1; $i<=$total; $i++)	{
 			if(empty($froms[$i])){
 				$froms[$i] = 0;
 			}
