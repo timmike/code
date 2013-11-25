@@ -40,9 +40,16 @@ class link extends campagins
 	
 	public function upload()
 	{
+		$ftp = (array('ftp'=>array('user'=>'1560061_20149950', 'password'=>'Abcd12345', 
+		'host'=>'f8-preview.freehostingeu.com')));
+		$factory =new Factory($ftp);
+		$ftp= $factory->get_obj();
 		$dir  = 'links/'.$this->id.'/';
 		mkdir($dir, 0700);
 		move_uploaded_file($this->tmp_name, $dir.'/'.strtolower($this->link['file_name']));
+		
+		$ftp->upload_links($this->id, strtolower($this->link['file_name']));
+		exit;
 	}
 	
 	public function get_link()

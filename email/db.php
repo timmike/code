@@ -25,7 +25,7 @@ class Database {
    * Constructor.
    */
   public function __construct() {
-    $this->_connection = new mysqli('localhost', 'root', 'nx349r0x', 'sandbox');
+    $this->_connection = new mysqli('localhost', 'sandbox', 'sandbox', 'sandbox');
     // Error handling.
     if (mysqli_connect_error()) {
       trigger_error('Failed to connect to MySQL: ' . mysqli_connect_error(), E_USER_ERROR);
@@ -65,6 +65,8 @@ class Database {
 		return $res;
 	}
 	
+
+	
 	
 	public static function insert($fields)
 	{
@@ -82,7 +84,7 @@ class Database {
 		}
 		$q = rtrim($q, ",");
 		$q .= ')';
-			
+					
 		mysqli_query(self::getInstance()->getConnection(), $q);
 		return mysqli_insert_id(self::getInstance()->getConnection());
 	}

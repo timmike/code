@@ -27,7 +27,7 @@ class templates extends Database
 		
 		$this->des = $template['template'];
 		
-		$this->template = array('creative_id' => $this->creative_id, 'name'=>$this->name, 'template'=>$this->des);
+		$this->template = array('creative_id' => $this->creative_id, 'name'=>$this->name);
 		
 	}
 		
@@ -38,6 +38,11 @@ class templates extends Database
 	
 	public function upload()
 	{
+		$ftp = (array('ftp'=>array('user'=>'1560061_20149950', 'password'=>'Abcd12345', 
+		'host'=>'f8-preview.freehostingeu.com')));
+		$factory =new Factory($ftp);
+		$ftp= $factory->get_obj();
+		
 		$dir  = 'templates/'.$this->creative_id.'/';
 		
 		if(!is_dir($dir))
@@ -46,6 +51,8 @@ class templates extends Database
 		$handle = fopen($dir.$this->creative_id.'_'.$this->name.'_'.$this->id.'.tpl', 'w') 
 		or die('Cannot open file:  ');		
 		fwrite($handle, $this->des); 
+			
+		$ftp->upload($this->creative_id.'_'.$this->name.'_'.$this->id.'.tpl', $handle, $this->creative_id);
 		
 		fclose($handle);
 	}
@@ -209,7 +216,7 @@ class templates extends Database
 }
 
 if(!empty($_POST['submitTemplate'])){
-	$template = array('template' => $_POST['template'], 'creative_id' => $_POST['creative_id'], 'name'=> $_POST['name'],
+	$template = array('creative_id' => $_POST['creative_id'], 'name'=> $_POST['name'],
 	'template'=>$_POST['template']);
 	$template = new templates($template);
 	$id = $template ->insert($template->get_template());
