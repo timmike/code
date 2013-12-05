@@ -38,9 +38,10 @@ class templates extends Database
 	
 	public function upload()
 	{
-		$ftp = (array('ftp'=>array('user'=>'1560061_20149950', 'password'=>'Abcd12345', 
-		'host'=>'f8-preview.freehostingeu.com')));
+		$ftp = (array('ftp'=>array('user'=>'timike', 'password'=>'ieZ4r-Hlx1am', 
+		'host'=>'50.87.144.118')));
 		$factory =new Factory($ftp);
+		
 		$ftp= $factory->get_obj();
 		
 		$dir  = 'templates/'.$this->creative_id.'/';
@@ -51,7 +52,6 @@ class templates extends Database
 		$handle = fopen($dir.$this->creative_id.'_'.$this->name.'_'.$this->id.'.tpl', 'w') 
 		or die('Cannot open file:  ');		
 		fwrite($handle, $this->des); 
-			
 		$ftp->upload($this->creative_id.'_'.$this->name.'_'.$this->id.'.tpl', $handle, $this->creative_id);
 		
 		fclose($handle);

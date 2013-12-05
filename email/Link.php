@@ -40,8 +40,8 @@ class link extends campagins
 	
 	public function upload()
 	{
-		$ftp = (array('ftp'=>array('user'=>'1560061_20149950', 'password'=>'Abcd12345', 
-		'host'=>'f8-preview.freehostingeu.com')));
+		$ftp = (array('ftp'=>array('user'=>'timike', 'password'=>'ieZ4r-Hlx1am', 
+		'host'=>'50.87.144.118')));
 		$factory =new Factory($ftp);
 		$ftp= $factory->get_obj();
 		$dir  = 'links/'.$this->id.'/';
@@ -49,7 +49,17 @@ class link extends campagins
 		move_uploaded_file($this->tmp_name, $dir.'/'.strtolower($this->link['file_name']));
 		
 		$ftp->upload_links($this->id, strtolower($this->link['file_name']));
-		exit;
+		
+		
+		$ch = curl_init();
+
+		curl_setopt($ch, CURLOPT_URL,"http://timmike1831.com/index.php");
+		curl_setopt($ch, CURLOPT_POST, 1);
+		curl_setopt($ch, CURLOPT_POSTFIELDS,
+            "link=".$this->name."&link_id=".$this->id."");
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		$server_output = curl_exec ($ch);
+		curl_close ($ch);
 	}
 	
 	public function get_link()
@@ -63,6 +73,8 @@ class link extends campagins
 	}
 	
 }
+
+
 
 if(!empty($_POST['submitlink'])){
 	$link = array('name'=>$_POST['name'], 'creative_id'=>$_POST['creative_id'], 

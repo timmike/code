@@ -38,14 +38,15 @@ class ftp extends Database
 	
 	public function upload($dir, $handle, $creative_id)
 	{
-		if (!ftp_chdir($this->conn_id, "templates")) {
-    	echo "Counld'nt changed directory " . ftp_pwd($conn_id) . "\n";
+
+		if (!ftp_chdir($this->conn_id, "public_html/templates")) {
+    		echo "Counld'nt changed directory " . ftp_pwd($conn_id) . "\n";
 		}
 				
 		ftp_pasv($this->conn_id,TRUE);
 		
 		if (!ftp_chdir($this->conn_id, $creative_id)) {
-  		ftp_mkdir($this->conn_id, $creative_id);
+  			ftp_mkdir($this->conn_id, $creative_id);
 			ftp_chdir($this->conn_id, $creative_id);
 		} 
 
@@ -53,24 +54,26 @@ class ftp extends Database
     	echo "There was a problem while uploading $file\n";
 			exit;
 		} 
-
+		exit;
 	}
 	
 	public function upload_links($link_id, $dir)
 	{
-		if (!ftp_chdir($this->conn_id, "links")) {
+		if (!ftp_chdir($this->conn_id, "public_html/links")) {
     	echo "Counld'nt changed directory " . ftp_pwd($conn_id) . "\n";
 		}
 		
 		ftp_pasv($this->conn_id,TRUE);
 		
 		if (!ftp_chdir($this->conn_id, $link_id)) {
-  		ftp_mkdir($this->conn_id, $link_id);
+  			ftp_mkdir($this->conn_id, $link_id);
 			ftp_chdir($this->conn_id, $link_id);
-		} 
+		}
 		
-		if (!ftp_put($this->conn_id, $dir, 'links/'.$link_id.'/'.$dir, FTP_ASCII)) {
-    	echo "There was a problem while uploading $file\n";
+
+		
+		if (!ftp_put($this->conn_id, $dir, 'links/'.$link_id.'/'.$dir, FTP_BINARY)) {
+    		echo "There was a problem while uploading $file\n";
 			exit;
 		} 
 	}
