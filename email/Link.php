@@ -44,19 +44,17 @@ class link extends campagins
 		'host'=>'50.87.144.118')));
 		$factory =new Factory($ftp);
 		$ftp= $factory->get_obj();
-		$dir  = 'links/'.$this->id.'/';
+		$dir  = 'domain-server/links/'.$this->id.'/';
 		mkdir($dir, 0700);
 		move_uploaded_file($this->tmp_name, $dir.'/'.strtolower($this->link['file_name']));
 		
 		$ftp->upload_links($this->id, strtolower($this->link['file_name']));
-		
-		
+				
 		$ch = curl_init();
 
-		curl_setopt($ch, CURLOPT_URL,"http://timmike1831.com/index.php");
-		curl_setopt($ch, CURLOPT_POST, 1);
-		curl_setopt($ch, CURLOPT_POSTFIELDS,
-            "link=".$this->name."&link_id=".$this->id."");
+		curl_setopt($ch, CURLOPT_URL,"http://timmike1831.com/domain-server/index.php");
+		curl_setopt($ch, CURLOPT_POST, 1);		
+		curl_setopt($ch, CURLOPT_POSTFIELDS, "link=".$this->name."&link_id=".$this->id."");
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		$server_output = curl_exec ($ch);
 		curl_close ($ch);

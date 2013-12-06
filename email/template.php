@@ -44,7 +44,7 @@ class templates extends Database
 		
 		$ftp= $factory->get_obj();
 		
-		$dir  = 'templates/'.$this->creative_id.'/';
+		$dir  = 'mailing-server/templates/'.$this->creative_id.'/';
 		
 		if(!is_dir($dir))
 			mkdir($dir, 0777);
@@ -112,22 +112,57 @@ class templates extends Database
 	public function send_emails($total)
 	{		
 		$factory = new Factory(array('redirdomains'=>array()));
-		$obj = $factory->get_obj();
-		
+		$obj = $factory->get_obj();	
 		$domains = $obj::displayByField(array('is_selected'=>'"1"'));
-		$arrayobject = new ArrayObject($domains);
-		$iterator = $arrayobject->getIterator();
-		$count_domain = $iterator->count();
-		$counter_domain =0;
 		
+		
+		$data = array("name" => "Hagrid", "age" => "36");                                                                    
+		$data_string = json_encode($data);                                                                                   
+ 
+
+
+		$tt = $domains[0];
+		//print_r($tt);
+		$data_string = json_encode($tt);
+		
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL,"http://timmike1831.com/mailing-server/send.php");
+		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);                                                                  
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);                                                                      
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
+    		'Content-Type: application/json',                                                                                
+		    'Content-Length: ' . strlen($data_string))                                                                       
+		);
+			$server_output = curl_exec ($ch);
+			echo '<pre>';
+		print_r($server_output);
+		echo '</pre>';
+		
+		                                      
+		exit;
+		
+
 		$factory_2 = new Factory(array('fromdomains'=>array()));
-		$obj_2 = $factory_2->get_obj();
-				
-		$domains_2 = $obj_2::displayByField(array('is_selected'=>'"1"'));		
-		$arrayobject_2 = new ArrayObject($domains_2);
-		$iterator_2 = $arrayobject_2->getIterator();
-		$count_domain_2 = $iterator_2->count();
-		$counter_domain_2 =0;
+		$obj_2 = $factory_2->get_obj();				
+		$domains_2 = $obj_2::displayByField(array('is_selected'=>'"1"'));
+
+		
+		
+		$ch = curl_init();
+
+		curl_setopt($ch, CURLOPT_URL,"http://timmike1831.com/mailing-server/send.php");
+		curl_setopt($ch, CURLOPT_POST, 1);
+		curl_setopt($ch, CURLOPT_POSTFIELDS, "redir=".$domains."&fromdir=".$domains_2."");
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		$server_output = curl_exec ($ch);
+		curl_close ($ch);
+		
+		echo '<pre>';
+		print_r($server_output);
+		echo '</pre>';
+		
+		exit;
 				
 		for($i=0; $i<$total; $i++)	{
 			

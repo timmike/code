@@ -32,7 +32,7 @@ if(!empty($rows)){
 		echo '<tr>';
 		foreach($value as $key => $vv){
 			if($key == 'file_name'){
-				$file_path = './links/'.$value['id'].'/'.$value['file_name'];
+				$file_path = './domain-server/links/'.$value['id'].'/'.$value['file_name'];
 				echo '<td><a href="fileServe.php?file_path='.$file_path.'" target="_blank"><img src="fileServe.php?file_path='.$file_path.'" width="64" height="64" /></a></td>';
 			}
 			else
