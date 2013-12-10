@@ -78,6 +78,16 @@ class ftp extends Database
 		} 
 	}
 
+
+	public function transfer($file)
+	{
+		ftp_pasv($this->conn_id,TRUE);
+		if (!ftp_put($this->conn_id, 'public_html/mailing-server/'.$file, $file, FTP_BINARY)) {
+    		echo "There was a problem while uploading $file\n";
+			exit;
+		} 
+	}
+
 }
 
 

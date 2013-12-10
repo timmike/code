@@ -110,10 +110,80 @@ class templates extends Database
 	}
 	
 	public function send_emails($total)
-	{		
+	{	
+		$xml = new DOMDocument("1.0");
+		$root = $xml->createElement("data");
+		$xml->appendChild($root);
+		$redirdomains = $xml->createElement("redirdomains");
+		$root->appendChild(	$redirdomains);
+		
 		$factory = new Factory(array('redirdomains'=>array()));
 		$obj = $factory->get_obj();	
 		$domains = $obj::displayByField(array('is_selected'=>'"1"'));
+		foreach($domains as $domain){
+			$do = $xml->createElement("domain");
+			$name = $xml->createTextNode($domain['name']);
+			$do->appendChild($name);
+			$redirdomains->appendChild($do);
+		}
+		
+		$fromdomains = $xml->createElement("fromdomains");
+		$root->appendChild($fromdomains);
+		$factory_2 = new Factory(array('fromdomains'=>array()));
+		$obj_2 = $factory_2->get_obj();				
+		$domains_2 = $obj_2::displayByField(array('is_selected'=>'"1"'));
+		foreach($domains_2 as $domain){
+			$do = $xml->createElement("domain");
+			$name = $xml->createTextNode($domain['name']);
+			$do->appendChild($name);
+			$fromdomains->appendChild($do);
+		}
+		
+		$templates = $xml->createElement("templates");
+		$root->appendChild($templates);
+		$template = $xml->createElement('template');
+		$creative_id = $xml->createElement("creative_id");
+		$c_id = $xml->createTextNode($this->creative_id);
+		$creative_id->appendChild($c_id);
+		$template->appendChild($creative_id);
+		$name = $xml->createElement("name");
+		$name_text = $xml->createTextNode($this->name);
+		$name->appendChild($name_text);
+		$template->appendChild($name);
+		$templates->appendChild($template);
+		
+		$tot = $xml->createElement("total");
+		$num = $xml->createTextNode($total);
+		$tot->appendChild($num);
+		$root->appendChild($tot);
+		
+		
+		
+		$xml->formatOutput = true;
+		$xml->save("send.xml") or die("Error");
+		
+		
+		$ftp = (array('ftp'=>array('user'=>'timike', 'password'=>'ieZ4r-Hlx1am', 
+		'host'=>'50.87.144.118')));
+		$factory =new Factory($ftp);
+		
+		$ftp= $factory->get_obj();
+		$ftp->transfer('send.xml');
+
+		
+		$data_string = array("name" => "Hagrid", "age" => "36");     
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL,"http://timmike1831.com/mailing-server/send.php");
+		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);                                                                  
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);                                                                      
+		$server_output = curl_exec ($ch);
+		echo '<pre>';
+		print_r($server_output);
+		echo '<pre>';	
+			
+		exit;		
+
 		
 		
 		$data = array("name" => "Hagrid", "age" => "36");                                                                    
@@ -124,7 +194,7 @@ class templates extends Database
 		$tt = $domains[0];
 		//print_r($tt);
 		$data_string = json_encode($tt);
-		
+	
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL,"http://timmike1831.com/mailing-server/send.php");
 		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
