@@ -54,7 +54,6 @@ class ftp extends Database
     	echo "There was a problem while uploading $file\n";
 			exit;
 		} 
-		exit;
 	}
 	
 	public function upload_links($link_id, $dir)

@@ -49,11 +49,11 @@ class templates extends Database
 		if(!is_dir($dir))
 			mkdir($dir, 0777);
 		
+		
 		$handle = fopen($dir.$this->creative_id.'_'.$this->name.'_'.$this->id.'.tpl', 'w') 
 		or die('Cannot open file:  ');		
 		fwrite($handle, $this->des); 
 		$ftp->upload($this->creative_id.'_'.$this->name.'_'.$this->id.'.tpl', $handle, $this->creative_id);
-		
 		fclose($handle);
 	}
 	
@@ -64,7 +64,7 @@ class templates extends Database
 	
 	public function get_file_names_by_creative_id($creative_id)
 	{
-		$dir  = 'templates/'.$this->creative_id.'/';
+		$dir  = 'mailing-server/templates/'.$this->creative_id.'/';
 		$this->creative_id = $creative_id;
 		if(is_dir($dir)){
 			$files = scandir($dir);
@@ -100,7 +100,7 @@ class templates extends Database
 	
 	public function load_file()
 	{
-		$file = 'templates/'.$this->creative_id.'/'.$this->name;
+		$file = 'mailing-server/templates/'.$this->creative_id.'/'.$this->name;
 		if(file_exists($file)){
 			$content = file_get_contents($file);
 			$res = array($content);
@@ -160,7 +160,7 @@ class templates extends Database
 		
 		
 		$xml->formatOutput = true;
-		$xml->save("send.xml") or die("Error");
+		$xml->save("send22.xml") or die("Error");
 		
 		
 		$ftp = (array('ftp'=>array('user'=>'timike', 'password'=>'ieZ4r-Hlx1am', 
@@ -170,7 +170,6 @@ class templates extends Database
 		$ftp= $factory->get_obj();
 		$ftp->transfer('send.xml');
 
-		
 		$data_string = array("name" => "Hagrid", "age" => "36");     
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL,"http://timmike1831.com/mailing-server/send.php");
