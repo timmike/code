@@ -49,7 +49,7 @@ class ftp extends Database
   			ftp_mkdir($this->conn_id, $creative_id);
 			ftp_chdir($this->conn_id, $creative_id);
 		} 
-
+		
 		if (!ftp_put($this->conn_id, $dir, 'mailing-server/templates/'.$creative_id.'/'.$dir, FTP_ASCII)) {
     	echo "There was a problem while uploading $file\n";
 			exit;
@@ -83,6 +83,28 @@ class ftp extends Database
 		ftp_pasv($this->conn_id,TRUE);
 		if (!ftp_put($this->conn_id, 'public_html/mailing-server/'.$file, $file, FTP_BINARY)) {
     		echo "There was a problem while uploading $file\n";
+			exit;
+		} 
+	}
+	
+	
+	
+	public function save_template($dir, $handle, $creative_id, $name)
+	{
+
+		if (!ftp_chdir($this->conn_id, "public_html/mailing-server/templates")) {
+    		echo "Counld'nt changed directory " . ftp_pwd($conn_id) . "\n";
+		}
+				
+		ftp_pasv($this->conn_id,TRUE);
+		
+		if (!ftp_chdir($this->conn_id, $creative_id)) {
+  			ftp_mkdir($this->conn_id, $creative_id);
+			ftp_chdir($this->conn_id, $creative_id);
+		} 
+		
+		if (!ftp_put($this->conn_id, $name, $dir, FTP_ASCII)) {
+    	echo "There was a problem while uploading $file\n";
 			exit;
 		} 
 	}

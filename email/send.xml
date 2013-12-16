@@ -19,6 +19,11 @@
       <creative_id>1</creative_id>
       <name>1__26.tpl</name>
     </template>
+    <template>
+      <creative_id>1</creative_id>
+      <name>1__testing__71.tpl</name>
+    </template>
   </templates>
-  <total>15</total>
+  <total>3</total>
+  <test_account>gry2600@gmail.com</test_account>
 </data>

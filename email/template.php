@@ -21,11 +21,14 @@ class templates extends Database
 	{
 		parent::setTable('template');
 		
-		$this->creative_id = $template['creative_id'];		
+		if(!empty($template['creative_id']))
+			$this->creative_id = $template['creative_id'];		
+	
+		if(!empty($template['name']))	
+			$this->name = $template['name'];		
 		
-		$this->name = $template['name'];		
-		
-		$this->des = $template['template'];
+		if(!empty($template['template']))
+			$this->des = $template['template'];
 		
 		$this->template = array('creative_id' => $this->creative_id, 'name'=>$this->name);
 		
@@ -83,7 +86,7 @@ class templates extends Database
 	
 	public function update_template()
 	{
-		$dir  = 'templates/'.$this->creative_id.'/'.$this->name;
+		$dir  = 'mailing-server/templates/'.$this->creative_id.'/'.$this->name;
 		if(file_exists($dir)){
 			
 			$handle = fopen($dir, 'w') 
@@ -95,7 +98,13 @@ class templates extends Database
 		else{
 			echo 'File does not exists. Please tell Tian or Mike';
 			exit;
-		}		
+		}
+		
+		$ftp = (array('ftp'=>array('user'=>'timike', 'password'=>'ieZ4r-Hlx1am', 
+		'host'=>'50.87.144.118')));
+		$factory =new Factory($ftp);
+		$ftp= $factory->get_obj();
+		$ftp->save_template($dir, $handle, $this->creative_id, $this->name);	
 	}
 	
 	public function load_file()
@@ -107,6 +116,79 @@ class templates extends Database
 			$res = json_encode($res);		
 			echo $res;
 		}
+		
+		
+	}
+	
+	public function test($creativeID, $temps, $test_account)
+	{
+		$xml = new DOMDocument("1.0");
+		$root = $xml->createElement("data");
+		$xml->appendChild($root);
+		$redirdomains = $xml->createElement("redirdomains");
+		$root->appendChild(	$redirdomains);
+		
+		$factory = new Factory(array('redirdomains'=>array()));
+		$obj = $factory->get_obj();	
+		$domains = $obj::displayByField(array('is_selected'=>'"1"'));
+		foreach($domains as $domain){
+			$do = $xml->createElement("domain");
+			$name = $xml->createTextNode($domain['name']);
+			$do->appendChild($name);
+			$redirdomains->appendChild($do);
+		}
+		
+		$fromdomains = $xml->createElement("fromdomains");
+		$root->appendChild($fromdomains);
+		$factory_2 = new Factory(array('fromdomains'=>array()));
+		$obj_2 = $factory_2->get_obj();				
+		$domains_2 = $obj_2::displayByField(array('is_selected'=>'"1"'));
+		foreach($domains_2 as $domain){
+			$do = $xml->createElement("domain");
+			$name = $xml->createTextNode($domain['name']);
+			$do->appendChild($name);
+			$fromdomains->appendChild($do);
+		}
+		
+		$templates = $xml->createElement("templates");
+		$root->appendChild($templates);
+		
+		if(!empty($temps)){
+			foreach($temps as $value){
+				$template = $xml->createElement('template');
+				$creative_id = $xml->createElement("creative_id");
+				$c_id = $xml->createTextNode($creativeID);
+				$creative_id->appendChild($c_id);
+				$template->appendChild($creative_id);
+				$name = $xml->createElement("name");
+				$name_text = $xml->createTextNode($value);
+				$name->appendChild($name_text);
+				$template->appendChild($name);
+				$templates->appendChild($template);
+			}
+		}
+		
+		$tot = $xml->createElement("total");
+		$num = $xml->createTextNode(3);
+		$tot->appendChild($num);
+		$root->appendChild($tot);
+		
+		$tot = $xml->createElement("test_account");
+		$num = $xml->createTextNode($test_account);
+		$tot->appendChild($num);
+		$root->appendChild($tot);
+				
+		$xml->formatOutput = true;
+		$xml->save("send.xml") or die("Error");
+		
+		
+		$ftp = (array('ftp'=>array('user'=>'timike', 'password'=>'ieZ4r-Hlx1am', 
+		'host'=>'50.87.144.118')));
+		$factory =new Factory($ftp);
+		
+		$ftp= $factory->get_obj();
+		$ftp->transfer('send.xml');
+		
 	}
 	
 	public function send_emails($total)
@@ -341,9 +423,22 @@ else if(!empty($_GET['templ']) && $_GET['templ'] == 'templ'){
 	$template = new templates($template);
 	$template->load_file();
 }
-else if(!empty($_POST['send']))
+else if(!empty($_POST['send']) || !empty($_GET['testcreativeID']))
 {
+	$parameter = explode('&',$_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"]);
+	$test_account = $parameter[1];
+	$test_account = explode("=", $test_account);
+	$test_account = $test_account[1];
+	$templates = json_decode(urldecode($parameter[2]));
+	$creativeID = $_GET['testcreativeID'];
+	$template = new templates(null);
+	$template->test($creativeID, $templates, $test_account);
+
+	exit;
 	$creative_id = $_POST['templ'];
+	
+	print_r($_POST['template_name']);
+	exit;
 	$template_name = $_POST['template_name'];
 	$template = $_POST['template'];
 	$template = array('creative_id'=>$creative_id, 'name'=>$template_name, 'template'=>$template);
@@ -352,7 +447,7 @@ else if(!empty($_POST['send']))
 }
 else if(!empty($_POST['updateTemplate']))
 {
-
+	
 	if(empty($_POST['templ'])){
 		echo 'creative id is not given. Cant update';
 	}
@@ -371,7 +466,6 @@ else if(!empty($_POST['updateTemplate']))
 	exit;
 	
 }
-
 
 
 

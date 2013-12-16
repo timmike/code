@@ -13,6 +13,7 @@ $( document ).ready(function() {
       	var json = $.parseJSON(data);
       	$("#templ").empty();
       	 $('#template').empty();
+      	 	$("#templ").attr('multiple', 'multiple');
       	$.each(json, function( index, value ) {
           if(index == 2)	{
           	$("#template_name").attr('value', value);
@@ -54,6 +55,28 @@ $( document ).ready(function() {
      	}     	
 		});
 	});
+	
+	
+	$( "#test" ).click(function() {
+		var arr = new Array();
+		$("#templ option:selected").each(function() {
+    		arr.push(this.text);
+		});
+		
+		var creativeID = $( "#templ option:selected").val();
+		
+		var test_account = $( "#test_account").val();
+		
+		$.ajax({
+      	url:  "./template.php?testcreativeID="+creativeID+"&test_account="+test_account,
+        type: "GET",
+        dataType: 'json',
+        data: JSON.stringify(arr),
+        success: function(response){}
+
+       });
+	
+	});
 
 });
 
@@ -86,5 +109,9 @@ $rows = creative::display();
 <input type="text" name="name" />
 <input type="submit" name="submitTemplate" value="Create New Template"/>
 <input type="submit" name="updateTemplate" value="Update"/>
-<input type="submit" name="send" value="Send"/>
+
+<br /><br />
+<input type="text" placeholder="seed account" id="test_account" />
+<input type="button" name="test" id="test" value="test" />
+<input type="button" name="send" value="Send"/>
 </form>
