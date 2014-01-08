@@ -1,0 +1,2 @@
+		$ftp = (array('ftp'=>array('user'=>'1560061_20149950', 'password'=>'Abcd12345', 
+		'host'=>'f8-preview.freehostingeu.com')));
