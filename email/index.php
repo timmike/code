@@ -100,29 +100,5 @@ if(!empty($redirdos)){
 
 <br />
 <?php
-
-$res = array();
-$handle = @fopen("20120413_null_763_unsubs.txt", "r");
-if ($handle) {
-    while (($buffer = fgets($handle, 4096)) !== false) {
-        $res[] =  $buffer.'<br />';
-    }
-    if (!feof($handle)) {
-        echo "Error: unexpected fgets() fail\n";
-    }
-    fclose($handle);
-}
-
-
-$conn = ftp_connect("f8-preview.freehostingeu.com") or die("Could not connect");
-ftp_login($conn,"1560061_20149950","Abcd12345");
-ftp_pasv($conn,TRUE);
-echo ftp_put($conn,"target.txt","templates/test.txt",FTP_ASCII);
-
-ftp_close($conn);
-
-
-
-
 ?>
 

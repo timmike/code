@@ -15,6 +15,8 @@ class templates extends Database
 	
 	private $template = array();
 	
+	private $templates = array();
+	
 	private $des;
 	
 	public function __construct($template)
@@ -29,6 +31,9 @@ class templates extends Database
 		
 		if(!empty($template['template']))
 			$this->des = $template['template'];
+		
+		if(!empty($template['templates']))
+			$this->templates =  $template['templates'];
 		
 		$this->template = array('creative_id' => $this->creative_id, 'name'=>$this->name);
 		
@@ -120,11 +125,49 @@ class templates extends Database
 		
 	}
 	
-	public function test($creativeID, $temps, $test_account)
+	public function send($seed, $send_account, $domain_select)
 	{
 		$xml = new DOMDocument("1.0");
 		$root = $xml->createElement("data");
 		$xml->appendChild($root);
+		
+		$templates = $xml->createElement("templates");
+		$root->appendChild($templates);
+		
+		if(!empty($this->templates)){
+			foreach($this->templates as $value){
+				$template = $xml->createElement('template');
+				$name = $xml->createElement("name");
+				$name_text = $xml->createTextNode($value);
+				$name->appendChild($name_text);
+				$template->appendChild($name);
+				$templates->appendChild($template);
+			}
+		}
+		
+		$root->appendChild($templates);
+		
+		$creative_id = $xml->createElement("creative_id");
+		$c = $xml->createTextNode($this->creative_id);
+		$creative_id->appendChild($c);
+		$root->appendChild($creative_id);
+	
+				
+		$send_a = $xml->createElement("send_account");
+		$c = $xml->createTextNode($send_account);
+		$send_a->appendChild($c);
+		$root->appendChild($send_a);
+		
+		$seed_a = $xml->createElement("seed");
+		$c = $xml->createTextNode($seed);
+		$seed_a->appendChild($c);
+		$root->appendChild($seed_a);
+		
+		$domain_a = $xml->createElement("domain_select");
+		$c = $xml->createTextNode($domain_select);
+		$domain_a->appendChild($c);
+		$root->appendChild($domain_a);
+		
 		$redirdomains = $xml->createElement("redirdomains");
 		$root->appendChild(	$redirdomains);
 		
@@ -150,34 +193,7 @@ class templates extends Database
 			$fromdomains->appendChild($do);
 		}
 		
-		$templates = $xml->createElement("templates");
-		$root->appendChild($templates);
-		
-		if(!empty($temps)){
-			foreach($temps as $value){
-				$template = $xml->createElement('template');
-				$creative_id = $xml->createElement("creative_id");
-				$c_id = $xml->createTextNode($creativeID);
-				$creative_id->appendChild($c_id);
-				$template->appendChild($creative_id);
-				$name = $xml->createElement("name");
-				$name_text = $xml->createTextNode($value);
-				$name->appendChild($name_text);
-				$template->appendChild($name);
-				$templates->appendChild($template);
-			}
-		}
-		
-		$tot = $xml->createElement("total");
-		$num = $xml->createTextNode(3);
-		$tot->appendChild($num);
-		$root->appendChild($tot);
-		
-		$tot = $xml->createElement("test_account");
-		$num = $xml->createTextNode($test_account);
-		$tot->appendChild($num);
-		$root->appendChild($tot);
-				
+						
 		$xml->formatOutput = true;
 		$xml->save("send.xml") or die("Error");
 		
@@ -188,6 +204,94 @@ class templates extends Database
 		
 		$ftp= $factory->get_obj();
 		$ftp->transfer('send.xml');
+		
+		if($domain_select == 'gmail.com'){
+			$ftp->transfer('gmail.txt');
+		}
+		
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL,"http://timmike1831.com/mailing-server/send.php");                                                                                                                              
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);                                                                      
+		$server_output = curl_exec ($ch);
+		echo "Send sucessfully.";
+		
+	}
+	
+	public function test($test_account)
+	{
+		$xml = new DOMDocument("1.0");
+		$root = $xml->createElement("data");
+		$xml->appendChild($root);
+		
+		$templates = $xml->createElement("templates");
+		$root->appendChild($templates);
+		
+		if(!empty($this->templates)){
+			foreach($this->templates as $value){
+				$template = $xml->createElement('template');
+				$name = $xml->createElement("name");
+				$name_text = $xml->createTextNode($value);
+				$name->appendChild($name_text);
+				$template->appendChild($name);
+				$templates->appendChild($template);
+			}
+		}
+		
+		$root->appendChild($templates);
+		
+		$test_a = $xml->createElement("test_account");
+		$acc = $xml->createTextNode($test_account);
+		$test_a->appendChild($acc);
+		$root->appendChild($test_a);
+		
+		$creative_id = $xml->createElement("creative_id");
+		$c = $xml->createTextNode($this->creative_id);
+		$creative_id->appendChild($c);
+		$root->appendChild($creative_id);
+		
+		$redirdomains = $xml->createElement("redirdomains");
+		$root->appendChild(	$redirdomains);
+		
+		$factory = new Factory(array('redirdomains'=>array()));
+		$obj = $factory->get_obj();	
+		$domains = $obj::displayByField(array('is_selected'=>'"1"'));
+		foreach($domains as $domain){
+			$do = $xml->createElement("domain");
+			$name = $xml->createTextNode($domain['name']);
+			$do->appendChild($name);
+			$redirdomains->appendChild($do);
+		}
+		
+		$fromdomains = $xml->createElement("fromdomains");
+		$root->appendChild($fromdomains);
+		$factory_2 = new Factory(array('fromdomains'=>array()));
+		$obj_2 = $factory_2->get_obj();				
+		$domains_2 = $obj_2::displayByField(array('is_selected'=>'"1"'));
+		foreach($domains_2 as $domain){
+			$do = $xml->createElement("domain");
+			$name = $xml->createTextNode($domain['name']);
+			$do->appendChild($name);
+			$fromdomains->appendChild($do);
+		}
+		
+						
+		$xml->formatOutput = true;
+		$xml->save("test.xml") or die("Error");
+		
+		
+		$ftp = (array('ftp'=>array('user'=>'timike', 'password'=>'ieZ4r-Hlx1am', 
+		'host'=>'50.87.144.118')));
+		$factory =new Factory($ftp);
+		
+		$ftp= $factory->get_obj();
+		$ftp->transfer('test.xml');
+		
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL,"http://timmike1831.com/mailing-server/test.php");                                                                                                                                    
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);                                                                      
+		$server_output = curl_exec ($ch);		
+		echo "Test sucessfully.";
+
 		
 	}
 	
@@ -423,8 +527,20 @@ else if(!empty($_GET['templ']) && $_GET['templ'] == 'templ'){
 	$template = new templates($template);
 	$template->load_file();
 }
-else if(!empty($_POST['send']) || !empty($_GET['testcreativeID']))
+else if(!empty($_GET['sendcreativeID']))
 {
+	$creative_id = $_GET['sendcreativeID'];
+	$send_account = $_GET['send_account'];
+	$seed = $_GET['seed'];
+	$domain_select = $_GET['domain_select'];
+	$template_names = $_GET['"test_templates'];
+	$template_names = str_replace('"', "", $template_names);
+	$template_names = explode(",", $template_names);
+	$template = array('creative_id'=>$creative_id, 'templates'=>$template_names);
+	$template = new templates($template);
+	$template->send($seed, $send_account, $domain_select);
+
+	exit;
 	$parameter = explode('&',$_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"]);
 	$test_account = $parameter[1];
 	$test_account = explode("=", $test_account);
@@ -432,7 +548,7 @@ else if(!empty($_POST['send']) || !empty($_GET['testcreativeID']))
 	$templates = json_decode(urldecode($parameter[2]));
 	$creativeID = $_GET['testcreativeID'];
 	$template = new templates(null);
-	$template->test($creativeID, $templates, $test_account);
+	$template->send($creativeID, $templates, $test_account);
 
 	exit;
 	$creative_id = $_POST['templ'];
@@ -466,6 +582,19 @@ else if(!empty($_POST['updateTemplate']))
 	exit;
 	
 }
+if(!empty($_GET['testcreativeID'])){
+	$test_account = $_GET['test_account'];
+	$creative_id = $_GET['testcreativeID'];
+	$template_names = $_GET['"test_templates'];
+	$template_names = str_replace('"', "", $template_names);
+	$template_names = explode(",", $template_names);
+	$template = array('creative_id'=>$creative_id, 'templates'=>$template_names);
+	$template = new templates($template);
+	$template->test($test_account);
+	exit;	
+}
+
+exit;
 
 
 
