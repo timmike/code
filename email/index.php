@@ -1,104 +1,250 @@
-<?php
-
-ini_set('display_errors', 1);
-
-ini_set('memory_limit', '-1');
-
+﻿<?php
 require_once('init.php');
-
-
 ?>
-
-<h2>Campagin</h2>
-<form action="campagins.php" method="post">
-	Campain<br />
-	Name
-	<input type="text" name="Name"/><br />
-  Advertiser
-	<input type="text" name="Advertiser"/><br />
-	Network
-	<input type="text" name="Network"/><br />
-	Offer
-	<input type="text" name="Offer"/><br />
-	Domain
-	<input type="text" name="Domain"/><br />
-	Cluster
-	<input type="text" name="Cluster"/><br />
-	<input type="submit" name="submit_campagin" />
-	
-</form>
-
-<?php
-$camp = array("campagins"=> array());
-$factory = new Factory($camp);
-$cam = $factory->get_obj();
-$camps = $cam::display();
-
-$factory = new Factory(array('fromdomains'=>array()));
-$fromdomains = $factory->get_obj();
-$fromdos = $fromdomains::display();
-
-echo '<table border="1">
-<tr><td>id</td><td>campagin name</td>
-<td>advertiser</td><td>network</td><td>domain</td><td>cluster</td><td>offer</td></tr>';
-if(!empty($camps)){
-	foreach($camps as $key => $value){
-		echo '<tr>';
-		foreach($value as $key => $vv){
-			if($key == 'id'){
-				echo '<td><a href="displayCreative.php?campagin_id='.$vv.'">'.$vv.'</td></a>';
-			}
-			else{
-				echo '<td>'.$vv.'</td>';
-			}
-		}
-		echo '</tr>';
-	}
-}
-echo '</table>';
-?>
-<h2>FromDomain</h2>
-<form action="fromdomains.php" method="POST">
-<?php
-if(!empty($fromdos)){
-	foreach($fromdos as $value){
-		echo '<input name="fromdomains['.$value["id"].']" type="checkbox" ';
-		if($value['is_selected'] == '1'){
-			echo ' checked= checked ';
-		}		
-		echo '/>'.$value['name'].'<br />';
-	}
-}
-?>
-<br />
-<input type="submit" value="submit" name="submit_from_domains"/>
-</form>
-
-<br />
-<?php
-$factory = new Factory(array('redirdomains'=>array()));
-$redirdomains = $factory->get_obj();
-$redirdos = $redirdomains::display();
-?>
-<h2>ToDomains</h2>
-
-<form action="redirdomains.php" method="POST">
-<?php
-if(!empty($redirdos)){
-	foreach($redirdos as $value){
-		echo '<input name="redirdomains['.$value["id"].']" type="checkbox" ';
-		if($value['is_selected'] == '1'){
-			echo ' checked= checked ';
-		}		
-		echo '/>'.$value['name'].'<br />';
-	}
-}
-?>
-<br />
-<input type="submit" value="submit" name="submit_redir_domains"/>
-</form>
-
-<br />
-<?php
-?>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <title>Typography | BlueWhale Admin</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css" media="screen"/>
+  <link rel="stylesheet" type="text/css" href="css/text.css" media="screen"/>
+  <link rel="stylesheet" type="text/css" href="css/grid.css" media="screen"/>
+  <link rel="stylesheet" type="text/css" href="css/layout.css" media="screen"/>
+  <link rel="stylesheet" type="text/css" href="css/nav.css" media="screen"/>
+  <!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css" media="screen" /><![endif]-->
+  <!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /><![endif]-->
+  <link href="css/table/demo_page.css" rel="stylesheet" type="text/css"/>
+  <!-- BEGIN: load jquery -->
+  <script src="js/jquery-1.6.4.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="js/jquery-ui/jquery.ui.core.min.js"></script>
+  <script src="js/jquery-ui/jquery.ui.widget.min.js" type="text/javascript"></script>
+  <script src="js/jquery-ui/jquery.ui.accordion.min.js" type="text/javascript"></script>
+  <script src="js/jquery-ui/jquery.effects.core.min.js" type="text/javascript"></script>
+  <script src="js/jquery-ui/jquery.effects.slide.min.js" type="text/javascript"></script>
+  <script src="js/jquery-ui/jquery.ui.mouse.min.js" type="text/javascript"></script>
+  <script src="js/jquery-ui/jquery.ui.sortable.min.js" type="text/javascript"></script>
+  <script src="js/table/jquery.dataTables.min.js" type="text/javascript"></script>
+  <!-- END: load jquery -->
+  <script type="text/javascript" src="js/table/table.js"></script>
+  <script src="js/setup.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      setupLeftMenu();
+      $('.datatable').dataTable();
+      setSidebarHeight();
+    });
+  </script>
+</head>
+<body>
+<div class="container_12">
+<div class="grid_12 header-repeat">
+  <div id="branding">
+    <div class="floatleft">
+      <img src="img/logo.png" alt="Logo"/></div>
+    <div class="floatright">
+      <div class="floatleft">
+        <img src="img/img-profile.jpg" alt="Profile Pic"/></div>
+      <div class="floatleft marginleft10">
+        <ul class="inline-ul floatleft">
+          <li>Hello Admin</li>
+          <li><a href="#">Config</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+        <br/>
+        <span class="small grey">Last Login: 3 hours ago</span>
+      </div>
+    </div>
+    <div class="clear">
+    </div>
+  </div>
+</div>
+<div class="clear">
+</div>
+<div class="grid_12">
+  <ul class="nav main">
+    <li class="ic-form-style"><a href="javascript:"><span>Management</span></a>
+      <ul>
+        <li><a href="index.php">Campagin</a></li>
+        <li><a href="displayDomainManagement.php">Domain</a></li>
+        <li><a href="displayTemplates.php">Templates</a></li>
+      </ul>
+    </li>
+    <li class="ic-notifications"><a href="displayTestSend.php"><span>Test & Send</span></a></li>
+  </ul>
+</div>
+<div class="clear">
+</div>
+<div class="grid_2">
+  <div class="box sidemenu">
+    <div class="block" id="section-menu">
+      <ul class="section menu">
+        <li><a class="menuitem">Menu 1</a>
+          <ul class="submenu">
+            <li><a>Submenu 1</a></li>
+            <li><a>Submenu 2</a></li>
+            <li><a class="active">Submenu 3</a></li>
+            <li><a>Submenu 4</a></li>
+            <li><a>Submenu 5</a></li>
+          </ul>
+        </li>
+        <li><a class="menuitem">Menu 2</a>
+          <ul class="submenu">
+            <li><a>Submenu 1</a></li>
+            <li><a>Submenu 2</a></li>
+            <li><a>Submenu 3</a></li>
+            <li><a>Submenu 4</a></li>
+            <li><a>Submenu 5</a></li>
+          </ul>
+        </li>
+        <li><a class="menuitem">Menu 3</a>
+          <ul class="submenu">
+            <li><a>Submenu 1</a></li>
+            <li><a>Submenu 2</a></li>
+            <li><a>Submenu 3</a></li>
+            <li><a>Submenu 4</a></li>
+            <li><a>Submenu 5</a></li>
+          </ul>
+        </li>
+        <li><a class="menuitem">Menu 4</a>
+          <ul class="submenu">
+            <li><a>Submenu 1</a></li>
+            <li><a>Submenu 2</a></li>
+            <li><a>Submenu 3</a></li>
+            <li><a>Submenu 4</a></li>
+            <li><a>Submenu 5</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="grid_10">
+  <div class="box round first grid">
+    <h2>
+      Submit a Campagin</h2>
+    <div class="block ">
+    	<form action="campagins.php" method="post">
+        <table class="form">
+          <tr>
+            <td class="col1">
+              <label>
+                Name
+              </label>
+            </td>
+            <td class="col2">
+              <input type="text" id="mini" class="mini" name="name" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>
+                Advertiser
+              </label>
+            </td>
+            <td>
+              <input type="text" class="mini" name="advertiser" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>
+                Network
+              </label>
+            </td>
+            <td>
+              <input type="text" class="mini" name="network" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>
+                Offer
+              </label>
+            </td>
+            <td>
+              <input type="text" class="mini" name="offer" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>
+                Domain
+              </label>
+            </td>
+            <td>
+              <input type="text" class="mini" name="domain" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>
+                Cluster
+              </label>
+            </td>
+            <td>
+              <input type="text" class="mini" name="cluster"/>
+            </td>
+          </tr>
+					<tr>
+						<td colspan="2"><button class="btn btn-orange" 
+							name="submitted_campagin" value="submitted_campagin">Submit a Campagin</button></td>
+					</tr>
+        </table>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="grid_10">
+  <div class="box round first grid">
+    <h2>
+      Campagin Information</h2>
+    <div class="block">
+      <table class="data display datatable">
+        <thead>
+        <tr>
+          <th>Campagin ID</th>
+          <th>Campagin Name</th>
+          <th>Advertiser</th>
+          <th>Network</th>
+          <th>Domain</th>
+          <th>Cluster</th>
+          <th>Offer</th>
+          <th>Date Submitted</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php
+        $camp = array("campagins"=> array());
+        $factory = new Factory($camp);
+        $campagin_object = $factory->get_obj();
+        $campagins = $campagin_object::display();
+				rsort($campagins);
+        if(!empty($campagins)){
+          foreach($campagins as $key => $value){
+            echo '<tr>';
+            echo '<td><a href="displayCreative.php?campagin_id='.$value['id'].'">'.$value['id'].'</a></td><td>'.$value['name'].'</td>
+			<td>'.$value['advertiser'].'</td><td>'.$value['network'].'</td>
+			<td>'.$value['domain'].'</td><td>'.$value['cluster'].'</td>
+			<td>'.$value['offer'].'</td>
+			<td>'.$value['date_submitted'].'</td>';
+            echo '</tr>';
+          }
+        }
+        ?>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="clear">
+</div>
+</div>
+<div class="clear">
+</div>
+<div id="site_info">
+  <p>
+    Copyright <a href="#">BlueWhale Admin</a>. All Rights Reserved.
+  </p>
+</div>
+</body>
+</html>

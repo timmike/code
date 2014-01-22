@@ -1,6 +1,4 @@
 <?php
-
-
 require_once('init.php');
 
 require_once('campagins.php');
@@ -15,6 +13,8 @@ class creative extends campagins
 	
 	private $creative;
 	
+	private $date_submitted;
+	
 	public function __construct($the_creative)
 	{
 		$this->setTable('creative');
@@ -23,7 +23,9 @@ class creative extends campagins
 		
 		$this->name = $the_creative['name'];
 		
-		$this->creative = array('campagin_id' =>$this->campagin_id, 'name'=>$this->name);
+		$this->date_submitted = $the_creative['date_submitted'];
+		
+		$this->creative = array('campagin_id' =>$this->campagin_id, 'name'=>$this->name, 'date_submitted'=>$this->date_submitted);
 	}
 	
 	public function get_creative()
@@ -38,8 +40,8 @@ class creative extends campagins
 	}
 }
 
-if(!empty($_POST['submitcreative'])){
-	$creative = array('name'=>$_POST['name'], 'campagin_id'=>$_POST['campagin_id']);
+if(!empty($_POST['submitted_creative'])){
+	$creative = array('name'=>$_POST['name'], 'campagin_id'=>$_POST['campagin_id'], 'date_submitted'=>date('Y-m-d H:i:s'));
 	$creative = new creative($creative);
 	$creative->insert($creative->get_creative());
 	header("location:displayCreative.php?campagin_id=".$_POST['campagin_id']."");

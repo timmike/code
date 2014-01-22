@@ -64,13 +64,10 @@ class Database {
 		}
 		return $res;
 	}
-	
-
-	
-	
+		
 	public static function insert($fields)
 	{
-		$q = ' insert into '.strtolower(self::$_table).'(';
+		$q = ' insert into SANDBOX.'.strtolower(self::$_table).'(';
 		$keys = array_keys($fields);
 		foreach($keys as $vv){
 			$q .= strtolower($vv).',';
@@ -84,7 +81,7 @@ class Database {
 		}
 		$q = rtrim($q, ",");
 		$q .= ')';
-					
+
 		mysqli_query(self::getInstance()->getConnection(), $q);
 		return mysqli_insert_id(self::getInstance()->getConnection());
 	}

@@ -59,7 +59,6 @@ class fromdomains extends Database
 	}	
 }
 
-
 if(!empty($_POST['submit_from_domains'])){
 	
 	$fromdomains = array('fromdomains' => array());
@@ -70,7 +69,7 @@ if(!empty($_POST['submit_from_domains'])){
 	
 	$fromdomains->compute_diff($_POST['fromdomains']);
 	
-	header("location:index.php");
+	header("location:displayDomainManagement.php");
 	exit;
 	
 }

@@ -6,7 +6,7 @@ require_once('init.php');
 class campagins extends Database
 {
 	
-	private static $form = array('Name', 'Advertiser', 'Network', 'Offer', 'Domain', 'Cluster');
+	private static $form = array('name', 'advertiser', 'network', 'offer', 'domain', 'cluster');
 	
 	private $form_values = array();
 	
@@ -15,7 +15,7 @@ class campagins extends Database
 		if(!empty($the_form)){
 			foreach(self::$form as $value){
 				if(!empty($the_form[$value])){
-					if($value != 'Name'){
+					if($value != 'name'){
 						require_once($value.'.php');
 					  $obj = array($value=>$the_form[$value]);
 						$factory = new Factory($obj);
@@ -34,6 +34,7 @@ class campagins extends Database
 					}				
 				}
 			}
+			$this->form_values['date_submitted'] = date('Y-m-d H:i:s');
 		}	
 	}
 	
@@ -49,8 +50,9 @@ class campagins extends Database
 	
 	public static function display()
 	{
+			
 		$result = mysqli_query(parent::getInstance()->getConnection(), 
-		'select c.id, c.name, a.advertiser, n.network, d.domain, cl.cluster, o.offer
+		'select c.id, c.name, a.advertiser, n.network, d.domain, cl.cluster, o.offer, c.date_submitted
 		from  campagin c left join advertiser a on c.advertiser_id = a.id
 		left join network n on c.network_id = n.id
 		left join domain d on c.domain_id = d.id
@@ -66,17 +68,16 @@ class campagins extends Database
 		return $res;
 		
 	}
+	
 }
 
-
-if(!empty($_POST['submit_campagin'])){
-	
+if(!empty($_POST['submitted_campagin'])){
 	$campagins = array("campagins"=>$_POST);
 	$factory = new Factory($campagins);
 	$campagin = $factory->get_obj();
-	$campagin->setTable('campagin');	
+	$campagin->setTable("campagin");
 	$campagin->insert($campagin->get_form_values());
-	header("location:index.php");
+	header("location:table.php");
 	exit;
 }
 

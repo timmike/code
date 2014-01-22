@@ -2,30 +2,22 @@
 <data>
   <templates>
     <template>
-      <name>18_2014_29.tpl</name>
-    </template>
-    <template>
-      <name>18_iioopl_31.tpl</name>
-    </template>
-    <template>
-      <name>18_iioopl_32.tpl</name>
+      <name>1__26.tpl</name>
     </template>
   </templates>
-  <creative_id>18</creative_id>
+  <creative_id>1</creative_id>
   <send_account>gry2600@gmail.com</send_account>
-  <seed>2</seed>
+  <seed>1</seed>
   <domain_select>gmail.com</domain_select>
   <redirdomains>
     <domain>sleep.net</domain>
-    <domain>apple.com</domain>
     <domain>juice.com</domain>
     <domain>mydealstoday.info</domain>
     <domain>yahoo.com</domain>
   </redirdomains>
   <fromdomains>
-    <domain>cat.com</domain>
-    <domain>dog.com</domain>
-    <domain>chichionline.net</domain>
+    <domain>monkey.net</domain>
     <domain>yahoo.com</domain>
+    <domain>mydealstoday.info</domain>
   </fromdomains>
 </data>

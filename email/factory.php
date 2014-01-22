@@ -33,7 +33,8 @@ class Factory
 			$function = key($this->data);
 			
 			require_once($function.'.php');
-			/**
+			
+			/*
  			 * To create an instance of a class, the new keyword must be used
  			 */
 			$this->obj = new $function($this->data[$function]);

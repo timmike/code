@@ -13,7 +13,6 @@ $( document ).ready(function() {
       	var json = $.parseJSON(data);
       	$("#templ").empty();
       	 $('#template').empty();
-      	 	$("#templ").attr('multiple', 'multiple');
       	$.each(json, function( index, value ) {
           if(index == 2)	{
           	$("#template_name").attr('value', value);
@@ -55,54 +54,6 @@ $( document ).ready(function() {
      	}     	
 		});
 	});
-	
-	
-	$( "#test" ).click(function() {		
-		var arr = new Array();
-		$("#templ option:selected").each(function() {
-    		arr.push(this.text);
-		});	
-		var creativeID = $( "#templ option:selected").val();	
-		var test_account = $( "#test_account").val();
-				
-		$.ajax({
-      	url:  "./template.php?testcreativeID="+creativeID+"&test_account="+test_account,
-        type: "GET",
-        dataType: 'json',
-        data: JSON.stringify('test_templates='+arr),
-        success: function(response){
-        	alert(response);
-        }
-			
-       });
-	
-	});
-	
-		
-	$( "#send" ).click(function() {		
-		var arr = new Array();
-		$("#templ option:selected").each(function() {
-    		arr.push(this.text);
-		});	
-		var creativeID = $( "#templ option:selected").val();	
-		var send_account = $( "#send_account").val();
-		var seed = $( "#seed").val();
-		var domain_list = $( "#domain_select" ).val();				
-		$.ajax({
-      	url:  "./template.php?sendcreativeID="+creativeID+"&send_account="+send_account+"&seed="+seed+"&domain_select="+domain_list,
-        type: "GET",
-        dataType: 'json',
-        data: JSON.stringify('test_templates='+arr),
-        success: function(response){
-        	alert(response);
-        }
-			
-       });
-	
-	});
-	
-
-	
 
 });
 
@@ -135,15 +86,5 @@ $rows = creative::display();
 <input type="text" name="name" />
 <input type="submit" name="submitTemplate" value="Create New Template"/>
 <input type="submit" name="updateTemplate" value="Update"/>
-<br /> <br />
-<input type="text" placeholder="seed account" name="test_account" id="test_account" />
-<input type="button" name="test" id="test" value="Test" name="test" />
-<br /><br />
-<input type="text" placeholder="seed" id="seed" />
-<input type="text" placeholder="seed account" id="send_account" />
-<select id="domain_select">
-	<option value="gmail.com">Gmail.com</option>
-	<option value="yahoo.com">Yahoo.com</option>
-</select>
-<input type="button" name="send" value="Send" id="send"/>
+<input type="submit" name="send" value="Send"/>
 </form>
