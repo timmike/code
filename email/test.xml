@@ -4,8 +4,17 @@
     <template>
       <name>1__26.tpl</name>
     </template>
+    <template>
+      <name>1__27.tpl</name>
+    </template>
+    <template>
+      <name>1_test_0.tpl</name>
+    </template>
+    <template>
+      <name>1_tian_33.tpl</name>
+    </template>
   </templates>
-  <test_account></test_account>
+  <test_account>gry2600@gmail.com</test_account>
   <creative_id>1</creative_id>
   <redirdomains>
     <domain>sleep.net</domain>
@@ -15,6 +24,9 @@
   </redirdomains>
   <fromdomains>
     <domain>monkey.net</domain>
+    <domain>cat.com</domain>
+    <domain>dog.com</domain>
+    <domain>chichionline.net</domain>
     <domain>yahoo.com</domain>
     <domain>mydealstoday.info</domain>
   </fromdomains>
