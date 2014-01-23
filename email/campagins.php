@@ -77,7 +77,7 @@ if(!empty($_POST['submitted_campagin'])){
 	$campagin = $factory->get_obj();
 	$campagin->setTable("campagin");
 	$campagin->insert($campagin->get_form_values());
-	header("location:table.php");
+	header("location:index.php");
 	exit;
 }
 
